@@ -42,3 +42,17 @@ main, #map {
   border-radius: 3px;
   margin: 1em;
 }
+
+.cardcontents dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardcontents dl div {
+  display: flex;
+  margin-right: 1em;
+}
+
+.cardcontents dl dd {
+  margin-left: 0.5em;
+}

@@ -11,7 +11,7 @@ async function getPlaces() {
   return data;
 }
 
-function placeCard(place) {
+function placeCard(place, showMap) {
   let website = "";
   let blurb = "";
   let instagram = "";
@@ -26,20 +26,35 @@ function placeCard(place) {
   if (place.twitter) {
     twitter = `<a href="${place.twitter}">Twitter</a>`;
   }
+  let phone = "";
+  if (place.phone) {
+    phone = `<a href="tel:${place.phone}">${place.phone}</a>`;
+  }
   if (place.blurb) {
     blurb = `<p class="blurb">${place.blurb}</p>`;
   }
   if (place.website) {
     website = `<a href="${place.website}" target="_blank" noopener>Visit Website</a>`;
   }
-  return `<h2>${place.title}</h2>
-    <p>Delivery: ${place.delivers ? "Yes" : "No"} | Post: ${place.postage ? "yes" : "No"}</p>
+  let map = "";
+  if (showMap && place.location) {
+    map = `<a href="https://www.google.com/maps/search/?api=1&query=${place.location.lat},${place.location.lng}" target="_blank" noopener >View Map</a>`;
+  }
+  return `<div class="cardcontents">
+    <h2>${place.title}</h2>
+    <dl>
+      <div><dt>Delivery:</dt><dd>${place.delivers ? "Yes" : "No"}</dd></div>
+      <div><dt>Post:</dt><dd>${place.postage ? "yes" : "No"}</dd></div>
+      <div><dt>Collect:</dt><dd>${place.collect ? "Yes" : "No"}</dd></div>
+    </dl>
     ${blurb}
     ${website}
+    ${phone}
+    ${map}
     <div class="icons">
       ${facebook} ${twitter} ${instagram}
     </div>
-  `;
+  </div>`;
 }
 
 async function init() {
@@ -85,23 +100,30 @@ async function toggleView() {
 
 function initListView(places) {
   let listElement = getListElement();
-  places.forEach((place) => {
-    let placeContent = placeCard(place);
+  listElement.innerHTML = "";
+  for (let place of places) {
+    if (place.offline) {
+      continue;
+    }
+    let placeContent = placeCard(place, true);
     let placeCardElement = document.createElement("div");
     placeCardElement.className = "card";
     placeCardElement.innerHTML = placeContent;
     listElement.appendChild(placeCardElement);
-  });
+  }
 }
 
 function initMap(places) {
   let placePointers = L.layerGroup();
-  places.forEach((place) => {
+  for (let place of places) {
+    if (place.offline) {
+      continue;
+    }
     if (place.location) {
-      let popupContent = placeCard(place);
+      let popupContent = placeCard(place, false);
       L.marker([place.location.lat, place.location.lng]).bindPopup(popupContent).addTo(placePointers);
     }
-  });
+  }
 
   let mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
   		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +

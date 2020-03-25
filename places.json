@@ -1,5 +1,6 @@
 [
   {
+    "collect": false,
     "location": false,
     "title": "Adventure Beer",
     "types": [
@@ -9,24 +10,34 @@
     "website": "https://adventurebeer.co.uk/"
   },
   {
+    "blurb": "Michelin star restaurant in Nottingham that are now delivering locally",
+    "phone": "+441159413515",
+    "collect": false,
+    "delivers": true,
     "location": {
       "lat": 52.9550437,
       "lng": -1.1655518
     },
     "title": "Alchemilla",
+    "twitter": "https://twitter.com/alchemillaresto",
+    "facebook": "https://www.facebook.com/alchemillarestaurant/",
     "website": "https://alchemillarestaurant.uk/"
   },
   {
     "facebook": "https://www.facebook.com/Amores-274600903024469/",
+    "collect": true,
+    "phone": "+441159222266",
     "title": "Amore's",
     "website": "https://www.amoresrestaurantbeeston.co.uk/"
   },
   {
     "title": "Ania",
+    "offline": true,
     "website": "https://www.facebook.com/Ania-Polish-Restaurant-111063317192347/"
   },
   {
     "delivers": false,
+    "offline": true,
     "location": {
       "lat": 52.9519484,
       "lng": -1.1429227
@@ -43,11 +54,16 @@
     "website": "https://www.facebook.com/anthonysboxes/"
   },
   {
+    "collect": true,
     "title": "Arrow Farm Shop",
-    "website": "https://arrowfarmshop.co.uk/"
+    "blurb": "Local farm shop that is accepting collections",
+    "website": "https://arrowfarmshop.co.uk/",
+    "facebook": "https://www.facebook.com/ArrowFarmShop/"
   },
   {
     "facebook": "https://www.facebook.com/Avocafe.Nutri2Go/",
+    "collect": true,
+    "delivers": true,
     "location": {
       "lat": 52.9514283,
       "lng": -1.1733636
@@ -64,6 +80,9 @@
       "lat": 52.9868047,
       "lng": -0.9776788999999999
     },
+    "collect": true,
+    "website": "http://biondi-bistro.com/",
+    "phone": "+44115 966 4833",
     "title": "Biondi Bistro"
   },
   {
@@ -98,6 +117,8 @@
       "lat": 52.9544894,
       "lng": -1.1441804
     },
+    "instagram": "https://www.instagram.com/brewdognotts/",
+    "facebook": "https://www.facebook.com/BrewDogNotts",
     "title": "Brewdog",
     "website": "https://www.brewdog.com/bars/uk/brewdog-nottingham"
   },
@@ -112,10 +133,12 @@
   },
   {
     "delivers": true,
+    "offline": true,
     "location": {
       "lat": 52.9530556,
       "lng": -1.1430556
     },
+    "instagram": "https://www.instagram.com/bunkwings/",
     "title": "Bunk Lace Market",
     "website": "http://www.bunkwings.com/"
   },
@@ -131,6 +154,7 @@
       "lat": 52.9300733,
       "lng": -1.2189523
     },
+    "phone": "+44115 922 1902",
     "title": "Cafe Roya",
     "website": "https://www.caferoya.com/"
   },
@@ -194,6 +218,7 @@
   },
   {
     "delivers": true,
+    "collect": true,
     "location": {
       "lat": 52.9715631,
       "lng": -1.153139
@@ -202,6 +227,7 @@
   },
   {
     "delivers": true,
+    "collect": true,
     "location": {
       "lat": 52.8973132,
       "lng": -1.271017
@@ -210,6 +236,7 @@
   },
   {
     "delivers": true,
+    "collect": true,
     "location": {
       "lat": 52.9461247,
       "lng": -1.2329118
@@ -247,6 +274,7 @@
   },
   {
     "delivers": true,
+    "collect": true,
     "instagram": "https://www.instagram.com/dasschuhzimmer/",
     "location": {
       "lat": 52.9224942,
@@ -264,11 +292,17 @@
     "title": "Dash Vegan"
   },
   {
+    "collect": true,
+    "delivers": true,
     "location": {
       "lat": 52.95315170000001,
       "lng": -1.1463852
     },
+    "phone": "+44115 948 4461",
+    "email": "food@delilahfinefoods.co.uk",
     "title": "Delilah Fine Foods",
+    "facebook": "https://www.facebook.com/DelilahFineFoods/",
+    "instagram": "https://www.instagram.com/delilahfinefoods/",
     "website": "https://delilahfinefoods.co.uk/"
   },
   {
@@ -809,6 +843,7 @@
     "website": "http://uchiwestbridgford.co.uk/"
   },
   {
+    "deliveroo": "https://deliveroo.co.uk/menu/nottingham/nottingham-city-centre/viva-street-food",
     "delivers": true,
     "location": {
       "lat": 52.95366689999999,
