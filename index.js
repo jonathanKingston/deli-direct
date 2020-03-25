@@ -43,8 +43,7 @@ function placeCard(place, showMap) {
   return `<div class="cardcontents">
     <h2>${place.title}</h2>
     <dl>
-      <div><dt>Delivery:</dt><dd>${place.delivers ? "Yes" : "No"}</dd></div>
-      <div><dt>Post:</dt><dd>${place.postage ? "yes" : "No"}</dd></div>
+      <div><dt>Delivery:</dt><dd>${place.delivers || place.postage ? "Yes" : "No"}</dd></div>
       <div><dt>Collect:</dt><dd>${place.collect ? "Yes" : "No"}</dd></div>
     </dl>
     ${blurb}
@@ -105,6 +104,10 @@ function initListView(places) {
     if (place.offline) {
       continue;
     }
+    // Skip any that don't have offerings
+    if (!(place.delivers || place.postage || place.collect)) {
+      continue;
+    }
     let placeContent = placeCard(place, true);
     let placeCardElement = document.createElement("div");
     placeCardElement.className = "card";
@@ -117,6 +120,10 @@ function initMap(places) {
   let placePointers = L.layerGroup();
   for (let place of places) {
     if (place.offline) {
+      continue;
+    }
+    // Skip any that don't have offerings
+    if (!(place.delivers || place.postage || place.collect)) {
       continue;
     }
     if (place.location) {

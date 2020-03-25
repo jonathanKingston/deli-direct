@@ -1,6 +1,7 @@
 [
   {
     "collect": false,
+    "postage": true,
     "location": false,
     "title": "Adventure Beer",
     "types": [
@@ -46,10 +47,18 @@
     "website": "https://anniesburgershack.com"
   },
   {
+    "delivers": true,
+    "title": "Another wine bar",
+    "instagram": "https://www.instagram.com/anotherwinebar/",
+    "facebook": "https://www.facebook.com/Anotherwinebar/",
+    "website": "http://anotherwinebar.co.uk/"
+  },
+  {
     "location": {
       "lat": 52.96646699999999,
       "lng": -1.1858744
     },
+    "delivers": true,
     "title": "Anthony's Fruit and Vegetables",
     "website": "https://www.facebook.com/anthonysboxes/"
   },
@@ -87,6 +96,7 @@
   },
   {
     "facebook": "https://facebook.com/BlueBarrelCider/",
+    "delivers": true,
     "title": "Blue Barrel Cider",
     "types": [
       "alcohol",
@@ -117,6 +127,7 @@
       "lat": 52.9544894,
       "lng": -1.1441804
     },
+    "offline": true,
     "instagram": "https://www.instagram.com/brewdognotts/",
     "facebook": "https://www.facebook.com/BrewDogNotts",
     "title": "Brewdog",
@@ -147,6 +158,9 @@
       "lat": 53.0922998,
       "lng": -0.9612767999999999
     },
+    "postage": true,
+    "instagram": "https://www.instagram.com/allminecakes/",
+    "website": "https://www.allminecakes.co.uk/",
     "title": "Cafe All Mine Cakes"
   },
   {
@@ -156,6 +170,7 @@
     },
     "phone": "+44115 922 1902",
     "title": "Cafe Roya",
+    "offline": true,
     "website": "https://www.caferoya.com/"
   },
   {
@@ -249,6 +264,7 @@
       "lat": 52.982072,
       "lng": -1.1453958
     },
+    "collect": true,
     "title": "Cornerstone Pizza"
   },
   {
@@ -310,6 +326,8 @@
       "lat": 52.9544301,
       "lng": -1.1493621
     },
+    "twitter": "https://twitter.com/Doughnotts/",
+    "offline": true,
     "title": "Doughnotts"
   },
   {
@@ -345,7 +363,9 @@
     "website": "https://thefilthyvegan.co.uk/"
   },
   {
+    "offline": true,
     "facebook": "https://facebook.com/foxandgrapesnottingham/",
+    "website": "https://www.castlerockbrewery.co.uk/pubs/fox-grapes/",
     "location": {
       "lat": 52.95367,
       "lng": -1.1376882
@@ -357,11 +377,14 @@
       "lat": 52.9272164,
       "lng": -1.2151484
     },
+    "collect": true,
+    "facebook": "https://www.facebook.com/fred.hallamltd/",
     "title": "Fred Hallam",
     "website": "https://fredhallam.shop/"
   },
   {
     "title": "Ginza",
+    "offline": true,
     "website": "https://www.ginza-nottingham.com/"
   },
   {
@@ -382,6 +405,7 @@
   },
   {
     "delivers": false,
+    "instagram": "https://www.instagram.com/homeboysuk",
     "location": {
       "lat": 52.957002,
       "lng": -1.148185
@@ -433,6 +457,7 @@
       "lat": 52.9543719,
       "lng": -1.1524793
     },
+    "postage": true,
     "title": "Kaffee haus",
     "website": "https://kaffeehaus.co.uk/"
   },
@@ -457,7 +482,10 @@
       "lat": 52.9804123,
       "lng": -1.1470826
     },
+    "postage": true,
+    "collect": true,
     "title": "Kraft Werks",
+    "facebook": "https://www.facebook.com/KraftWerks/",
     "website": "http://www.kraft-werks.com/"
   },
   {
@@ -466,6 +494,8 @@
       "lat": 52.954004,
       "lng": -1.1524848
     },
+    "phone": "0115 9411369",
+    "offline": true,
     "title": "Kushi-Ya",
     "website": "https://kushi-ya.co.uk/"
   },
@@ -512,6 +542,8 @@
       "lat": 52.95268129999999,
       "lng": -1.1540037
     },
+    "website": "https://www.mem-saab.co.uk/",
+    "offline": true,
     "title": "MemSaab"
   },
   {
@@ -556,6 +588,9 @@
   },
   {
     "delivers": true,
+    "collect": false,
+    "twitter": "https://twitter.com/okendecoffee",
+    "facebook": "https://www.facebook.com/okendecoffee/",
     "location": {
       "lat": 52.9298836,
       "lng": -1.125556
@@ -565,7 +600,8 @@
   },
   {
     "facebook": "https://www.facebook.com/oozeeboozeebakes/",
-    "title": "Oozee Boozee Bakes"
+    "title": "Oozee Boozee Bakes",
+    "delivers": true
   },
   {
     "location": {
@@ -590,6 +626,10 @@
       "lat": 52.9614085,
       "lng": -1.1509245
     },
+    "delivers": true,
+    "collect": true,
+    "phone": "0115 958 1339",
+    "deliveroo": "https://deliveroo.co.uk/menu/nottingham/nottingham-city-centre/palb-catering-ltd-t-a-prickly-pear",
     "title": "Prickly Pear"
   },
   {
@@ -634,11 +674,13 @@
     "website": "http://www.shopzero.co.uk/"
   },
   {
+    "offline": true,
     "location": {
       "lat": 52.9534597,
       "lng": -1.1448323
     },
     "title": "Six Barrel Draughthouse Hockley",
+    "instagram": "https://www.instagram.com/sixbarrelhockley/",
     "website": "https://sixbarreldrafthouse.co.uk/"
   },
   {
@@ -694,10 +736,13 @@
       "lng": -1.1484425
     },
     "title": "The Cheese Shop",
+    "collect": true,
+    "phone": "01159419114",
     "twitter": "https://twitter.com/cheeseshopnottm"
   },
   {
     "title": "The Country Victualler",
+    "delivers": true,
     "website": "https://thecountryvictualler.co.uk/"
   },
   {
@@ -710,10 +755,12 @@
       "lat": 52.93055889999999,
       "lng": -1.1255994
     },
+    "twitter": "https://twitter.com/NFBdirect",
     "title": "The Fruit Basket",
     "website": "http://www.thefruitbasketdirect.uk/"
   },
   {
+    "collect": true,
     "title": "The Fruit Bowl",
     "website": "https://www.facebook.com/The-Fruit-Bowl-Mapperley-1597571230463340/"
   },
@@ -734,6 +781,9 @@
     "title": "The Gedling Inn"
   },
   {
+    "delivers": true,
+    "collect": true,
+    "twitter": "https://twitter.com/LarwoodVocePK",
     "facebook": "https://www.facebook.com/LarwoodVocePubKitchen/",
     "title": "The Larwood & Voce",
     "website": "https://www.larwoodandvoce.co.uk/take-away-menu.html"
@@ -804,6 +854,8 @@
       "lat": 52.955451,
       "lng": -1.207904
     },
+    "delivers": true,
+    "collect": true,
     "title": "The Wollaton Pub and Kitchen",
     "website": "https://www.thewollaton.co.uk/"
   },
@@ -818,6 +870,7 @@
       "lng": -1.218419
     },
     "title": "Totally Tapped",
+    "offline": true,
     "website": "https://shop.totallybrewed.com/"
   },
   {
@@ -827,6 +880,8 @@
       "lng": -1.158548
     },
     "title": "Tough Mary's Bakehouse",
+    "order": "https://docs.google.com/forms/d/e/1FAIpQLScsGc7DRgzqxJN03ZzOB_oky4vMdOKP3kKcx2fWwj6YxXpwBg/viewform",
+    "instagram": "https://www.instagram.com/toughmarysbakehouse/",
     "website": "http://www.toughmarysbakehouse.co.uk/"
   },
   {
@@ -840,6 +895,7 @@
     },
     "phone": "0115 981 1042",
     "title": "Uchi",
+    "offline": true,
     "website": "http://uchiwestbridgford.co.uk/"
   },
   {
@@ -852,18 +908,12 @@
     "title": "Viva Street Food"
   },
   {
+    "phone": "01909 478 725",
+    "collect": true,
+    "facebook": "https://www.facebook.com/WelbeckCourtyard/",
     "title": "Welbeck Farm Shop",
     "twitter": "https://twitter.com/welbeckfarmshop",
     "website": "https://www.welbeckfarmshop.co.uk/"
-  },
-  {
-    "delivers": false,
-    "location": {
-      "lat": 52.9535799,
-      "lng": -1.145725
-    },
-    "title": "Wired",
-    "website": "https://wiredcafe.co.uk/"
   },
   {
     "location": {
@@ -871,7 +921,11 @@
       "lng": -1.145725
     },
     "title": "Wired Cafe Bar",
-    "website": "https://www.facebook.com/wiredcafebar/"
+    "twitter": "https://twitter.com/wiredcafebar",
+    "website": "https://wiredcafe.co.uk/",
+    "delivers": false,
+    "offline": true,
+    "facebook": "https://www.facebook.com/wiredcafebar/"
   },
   {
     "delivers": true,
@@ -884,7 +938,9 @@
   },
   {
     "title": "Yumacha",
-    "website": "http://yumacha.co.uk/"
+    "offline": true,
+    "website": "http://yumacha.co.uk/",
+    "phone": "01159 811 400"
   },
   {
     "delivers": true,
