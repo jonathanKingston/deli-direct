@@ -377,6 +377,7 @@
       "lat": 52.9272164,
       "lng": -1.2151484
     },
+    "delivers": true,
     "collect": true,
     "facebook": "https://www.facebook.com/fred.hallamltd/",
     "title": "Fred Hallam",
