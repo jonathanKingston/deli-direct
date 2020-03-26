@@ -71,7 +71,7 @@ async function init() {
 }
 
 function changePreloadStyles() {
-  let metas = [...document.getElementsByTagName("meta")];
+  let metas = [...document.getElementsByTagName("link")];
   for (let meta of metas) {
     if (meta.rel == "preload" && meta.as == "style") {
       meta.rel = "stylesheet";
