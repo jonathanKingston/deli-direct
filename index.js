@@ -32,7 +32,7 @@ function placeCard(place, showMap) {
   }
   let phone = "";
   if (place.phone) {
-    phone = `<a href="tel:${place.phone}">${place.phone}</a>`;
+    phone = createLink(place.phone, `tel:${place.phone}`, "phone");
   }
   if (place.blurb) {
     blurb = `<p class="blurb">${place.blurb}</p>`;
@@ -42,7 +42,8 @@ function placeCard(place, showMap) {
   }
   let map = "";
   if (showMap && place.location) {
-    map = `<a href="https://www.google.com/maps/search/?api=1&query=${place.location.lat},${place.location.lng}" target="_blank" noopener >View Map</a>`;
+    let maplink = `https://www.google.com/maps/search/?api=1&query=${place.location.lat},${place.location.lng}`;
+    map = createLink("Visit Map", maplink, "map");
   }
   return `<div class="cardcontents">
     <h2>${place.title}</h2>
