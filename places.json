@@ -644,6 +644,10 @@
   {
     "delivers": true,
     "facebook": "https://www.facebook.com/oozeeboozeebakes/",
+    "blurb": "Beeston bakery offering boozy cakes",
+    "types": [
+      "bakery"
+    ],
     "title": "Oozee Boozee Bakes"
   },
   {
@@ -653,6 +657,10 @@
     },
     "postage": true,
     "title": "Outpost coffee",
+    "blurb": "Local coffee roaster supplying fair trade coffees",
+    "types": [
+      "coffee"
+    ],
     "website": "https://www.outpost.coffee/"
   },
   {
@@ -806,6 +814,7 @@
       "lat": 52.93055889999999,
       "lng": -1.1255994
     },
+    "blurb": "Greengrocers offering delivery of fruit, veg and other items.",
     "title": "The Fruit Basket",
     "twitter": "https://twitter.com/NFBdirect",
     "website": "http://www.thefruitbasketdirect.uk/"
@@ -813,14 +822,19 @@
   {
     "collect": true,
     "title": "The Fruit Bowl",
+    "blurb": "Fruit and vegtable shop in Mapperley.",
     "website": "https://www.facebook.com/The-Fruit-Bowl-Mapperley-1597571230463340/"
   },
   {
     "delivers": true,
+    "collect": true,
+    "phone": "0115 922 8300",
     "location": {
       "lat": 52.9232004,
       "lng": -1.2196913
     },
+    "blurb": "Beeston tapas bar and restaurant offering takeout and delivery.",
+    "website": "https://www.thefrustratedchef.co.uk/",
     "title": "The Frustrated Chef"
   },
   {
@@ -841,7 +855,9 @@
     "website": "https://www.larwoodandvoce.co.uk/take-away-menu.html"
   },
   {
+    "blurb": "Local chef offering salads and other meals for delivery.",
     "delivers": true,
+    "instagram": "https://www.instagram.com/littlebrickhouse_cafe/",
     "facebook": "https://www.facebook.com/theLittleBrickhouse/",
     "location": {
       "lat": 52.9821083,
@@ -974,9 +990,11 @@
     "facebook": "https://www.facebook.com/WelbeckCourtyard/",
     "phone": "01909 478 725",
     "title": "Welbeck Farm Shop",
+    "blurb": "Farm shop in Worksop supplying deli style food",
     "twitter": "https://twitter.com/welbeckfarmshop",
     "types": [
-      "greengrocer"
+      "greengrocer",
+      "deli"
     ],
     "website": "https://www.welbeckfarmshop.co.uk/"
   },
@@ -1009,6 +1027,8 @@
   },
   {
     "delivers": true,
+    "offline": true,
+    "twitter": "https://twitter.com/ZaapThai",
     "location": {
       "lat": 52.9531006,
       "lng": -1.1534866
