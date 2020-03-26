@@ -165,3 +165,9 @@ function initMap(places) {
   });
 }
 init();
+
+// Google analytics crap
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function (){dataLayer.push(arguments);};
+gtag('js', new Date());
+gtag('config', 'UA-161955128-1');
