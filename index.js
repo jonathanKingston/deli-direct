@@ -68,6 +68,9 @@ async function init() {
   initListView(places);
 
   changePreloadStyles();
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+  }
 }
 
 function changePreloadStyles() {
