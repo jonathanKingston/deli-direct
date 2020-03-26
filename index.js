@@ -12,7 +12,7 @@ async function getPlaces() {
 }
 
 function createLink(text, link, className) {
-  return `<a href="${link}" class="${className}" noopener target="_blank">${text}</a>`;
+  return `<a href="${link}" class="${className}" rel="noopener noreferrer" target="_blank">${text}</a>`;
 }
 
 function placeCard(place, showMap) {
@@ -66,6 +66,17 @@ async function init() {
   let toggleElement = getToggleElement();
   toggleElement.addEventListener("click", toggleView);
   initListView(places);
+
+  changePreloadStyles();
+}
+
+function changePreloadStyles() {
+  let metas = [...document.getElementsByTagName("meta")];
+  for (let meta of metas) {
+    if (meta.rel == "preload" && meta.as == "style") {
+      meta.rel = "stylesheet";
+    }
+  }
 }
 
 function getListElement() {
