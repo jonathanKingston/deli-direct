@@ -1,4 +1,4 @@
-const CACHE_NAME = "cache-v7";
+const CACHE_NAME = "cache-v11";
 let urlsToCache = [
   "/",
   "/manifest.webmanifest",
