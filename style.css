@@ -76,12 +76,6 @@ body .leaflet-popup-content-wrapper,
   margin: 1em;
 }
 
-@media screen and (max-width: 800px) {
-  .card {
-    font-size: 13px;
-  }
-}
-
 body .leaflet-popup-content-wrapper {
   margin-bottom: 0;
 }
@@ -106,6 +100,17 @@ body .leaflet-container a.leaflet-popup-close-button {
 
 .cardcontents {
   width: calc(20em - 2.908em);
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    font-size: 13px;
+    margin: 0.5em;
+    width: 19em;
+  }
+  .cardcontents {
+    width: calc(19em - 2.908em);
+  }
 }
 
 .cardcontents .phone,
