@@ -4,6 +4,10 @@ html, body {
   font-family: 'Gothic A1', sans-serif;
 }
 
+a {
+  color: #028eb0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Public Sans', sans-serif;
 }
@@ -53,6 +57,35 @@ main, #map {
   margin-right: 1em;
 }
 
+.cardcontents dl dt {
+  font-weight: bold;
+}
+
 .cardcontents dl dd {
   margin-left: 0.5em;
+}
+
+.cardcontents .icons {
+  margin-top: 1em;
+  display: flex;
+}
+
+.cardcontents .icons a {
+  margin-right: 0.5em;
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -999999px;
+}
+
+.cardcontents .icons .facebook {
+  background: url('/icons/facebook.svg');
+}
+
+.cardcontents .icons .twitter {
+  background: url('/icons/twitter.svg');
+}
+
+.cardcontents .icons .instagram {
+  background: url('/icons/instagram.svg');
 }

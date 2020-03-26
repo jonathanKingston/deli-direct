@@ -11,20 +11,24 @@ async function getPlaces() {
   return data;
 }
 
+function createLink(text, link, className) {
+  return `<a href="${link}" class="${className}" noopener target="_blank">${text}</a>`;
+}
+
 function placeCard(place, showMap) {
   let website = "";
   let blurb = "";
   let instagram = "";
   if (place.instagram) {
-    instagram = `<a href="${place.instagram}">Instagram</a>`;
+    instagram = createLink("Instagram", place.instagram, "instagram");
   }
   let facebook = "";
   if (place.facebook) {
-    facebook = `<a href="${place.facebook}">Facebook</a>`;
+    facebook = createLink("Facebook", place.facebook, "facebook");
   }
   let twitter = "";
   if (place.twitter) {
-    twitter = `<a href="${place.twitter}">Twitter</a>`;
+    twitter = createLink("Twitter", place.facebook, "twitter");
   }
   let phone = "";
   if (place.phone) {
@@ -34,7 +38,7 @@ function placeCard(place, showMap) {
     blurb = `<p class="blurb">${place.blurb}</p>`;
   }
   if (place.website) {
-    website = `<a href="${place.website}" target="_blank" noopener>Visit Website</a>`;
+    website = createLink("Visit Website", place.website, "website");
   }
   let map = "";
   if (showMap && place.location) {
