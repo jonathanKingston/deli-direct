@@ -28,7 +28,7 @@ function placeCard(place, showMap) {
   }
   let twitter = "";
   if (place.twitter) {
-    twitter = createLink("Twitter", place.facebook, "twitter");
+    twitter = createLink("Twitter", place.twitter, "twitter");
   }
   let phone = "";
   if (place.phone) {
