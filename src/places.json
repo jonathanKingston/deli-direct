@@ -176,6 +176,13 @@
     "website": "https://www.brigittebordeauxwine.co.uk/"
   },
   {
+    "blurb": "Deli offering pre-orders in the East Leake area.",
+    "collect": true,
+    "email": "orders@bryersdeli.com",
+    "facebook": "https://www.facebook.com/bryerseastleake/",
+    "title": "Bryer's East Leake"
+  },
+  {
     "collect": true,
     "delivers": true,
     "offline": true,
