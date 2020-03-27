@@ -397,6 +397,12 @@
     "website": "https://delilahfinefoods.co.uk/"
   },
   {
+    "collect": true,
+    "deliveroo": "https://deliveroo.co.uk/menu/nottingham/nottingham-city-centre/dhoris-kitchen",
+    "delivers": true,
+    "title": "Dhoris Kitchen"
+  },
+  {
     "location": {
       "lat": 52.9544301,
       "lng": -1.1493621
@@ -528,6 +534,7 @@
     "website": "https://www.hopwells.com/"
   },
   {
+    "collect": true,
     "delivers": true,
     "location": {
       "lat": 52.9508652,
