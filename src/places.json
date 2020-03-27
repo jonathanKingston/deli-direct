@@ -12,37 +12,15 @@
     "website": "https://adventurebeer.co.uk/"
   },
   {
-    "title": "No.1 Cob Shop",
-    "facebook": "https://www.facebook.com/pages/category/Fast-Food-Restaurant/No-1-COB-SHOP-245530869486597/",
-    "offline": true,
-    "collect": true,
-    "deliver": true
-  },
-  {
-    "title": "Bulwell Balti House",
-    "offline": true,
-    "delivers": true,
-    "collect": true,
-    "website": "https://bulwellbalti.co.uk/"
-  },
-  {
-    "title": "Home made cafe",
-    "collect": true,
-    "blurb": "Treats and cakes at the forest recreation ground.",
-    "facebook": "https://www.facebook.com/Homemadecafe/",
-    "instagram": "https://www.instagram.com/homemadecafe/",
-    "website": "https://www.homemadecafe.com/"
-  },
-  {
     "blurb": "Michelin star restaurant in Nottingham that are now delivering locally",
     "collect": false,
     "delivers": true,
-    "offline": true,
     "facebook": "https://www.facebook.com/alchemillarestaurant/",
     "location": {
       "lat": 52.9550437,
       "lng": -1.1655518
     },
+    "offline": true,
     "phone": "+441159413515",
     "title": "Alchemilla",
     "twitter": "https://twitter.com/alchemillaresto",
@@ -174,14 +152,6 @@
     "website": "https://www.brewdog.com/bars/uk/brewdog-nottingham"
   },
   {
-    "title": "Buns and Burgers",
-    "delivers": true,
-    "collect": true,
-    "phone": "0115 841 0086",
-    "justeat": "https://www.just-eat.co.uk/restaurants-bunsburgers-nottingham/menu",
-    "deliveroo": "https://deliveroo.co.uk/menu/nottingham/lenton/buns-and-burgers-ntg"
-  },
-  {
     "blurb": "Wine, beer and spirits shop in Nottingham, United Kingdom",
     "delivers": true,
     "facebook": "https://www.facebook.com/brigittebordeauxwine",
@@ -199,6 +169,13 @@
     "website": "https://www.brigittebordeauxwine.co.uk/"
   },
   {
+    "collect": true,
+    "delivers": true,
+    "offline": true,
+    "title": "Bulwell Balti House",
+    "website": "https://bulwellbalti.co.uk/"
+  },
+  {
     "delivers": true,
     "instagram": "https://www.instagram.com/bunkwings/",
     "location": {
@@ -208,6 +185,14 @@
     "offline": true,
     "title": "Bunk Lace Market",
     "website": "http://www.bunkwings.com/"
+  },
+  {
+    "collect": true,
+    "deliveroo": "https://deliveroo.co.uk/menu/nottingham/lenton/buns-and-burgers-ntg",
+    "delivers": true,
+    "justeat": "https://www.just-eat.co.uk/restaurants-bunsburgers-nottingham/menu",
+    "phone": "0115 841 0086",
+    "title": "Buns and Burgers"
   },
   {
     "instagram": "https://www.instagram.com/allminecakes/",
@@ -249,17 +234,17 @@
     "website": "http://canvasandcoffee.uk/"
   },
   {
+    "blurb": "Cafe offering meals to take away",
+    "collect": true,
+    "facebook": "https://www.facebook.com/carriagescafe/",
+    "instagram": "https://www.instagram.com/carriagescafe/",
     "location": {
       "lat": 52.8850072,
       "lng": -1.0806468
     },
-    "collect": true,
     "phone": "01636676129",
-    "blurb": "Cafe offering meals to take away",
-    "instagram": "https://www.instagram.com/carriagescafe/",
-    "facebook": "https://www.facebook.com/carriagescafe/",
-    "website": "https://www.carriagesnewark.co.uk/",
-    "title": "Carriages Cafe"
+    "title": "Carriages Cafe",
+    "website": "https://www.carriagesnewark.co.uk/"
   },
   {
     "location": {
@@ -281,11 +266,11 @@
     "website": "https://castlerockbreweryshop.com/"
   },
   {
-    "facebook": "https://www.facebook.com/Chambers-butchers-Nottingham-228400460529940/",
-    "title": "Chambers Butchers",
-    "phone": "01159267034",
+    "blurb": "Butchers offering free delivery",
     "delivers": true,
-    "blurb": "Butchers offering free delivery"
+    "facebook": "https://www.facebook.com/Chambers-butchers-Nottingham-228400460529940/",
+    "phone": "01159267034",
+    "title": "Chambers Butchers"
   },
   {
     "delivers": true,
@@ -324,8 +309,8 @@
     "title": "Cod's Scallops Wollaton"
   },
   {
-    "delivers": true,
     "collect": true,
+    "delivers": true,
     "facebook": "https://www.facebook.com/cornerstonepizzas/",
     "location": {
       "lat": 52.982072,
@@ -343,20 +328,20 @@
     "website": "https://www.craigfloatechef.com/"
   },
   {
-    "offline": true,
     "facebook": "https://www.facebook.com/CuzinaNottingham/",
+    "offline": true,
     "title": "Curzina"
   },
   {
+    "collect": true,
+    "delivers": true,
+    "facebook": "https://www.facebook.com/Dandelion.kimberley/",
     "location": {
       "lat": 52.9974639,
       "lng": -1.2565679
     },
-    "delivers": true,
-    "collect": true,
     "phone": "0115 9385556",
-    "title": "Dandelion Deli Coffee",
-    "facebook": "https://www.facebook.com/Dandelion.kimberley/"
+    "title": "Dandelion Deli Coffee"
   },
   {
     "blurb": "Beeston hidden bar delivering drinks and cocktails",
@@ -407,31 +392,31 @@
     "twitter": "https://twitter.com/Doughnotts/"
   },
   {
+    "blurb": "Speciality food shop offering deliveries",
+    "delivers": true,
+    "facebook": "https://www.facebook.com/eastmidsfinefoods/",
     "location": {
       "lat": 52.95315170000001,
       "lng": -1.1463852
     },
-    "delivers": true,
-    "blurb": "Speciality food shop offering deliveries",
-    "title": "East Midlands Fine Foods",
-    "facebook": "https://www.facebook.com/eastmidsfinefoods/"
+    "title": "East Midlands Fine Foods"
   },
   {
+    "collect": true,
+    "delivers": true,
+    "facebook": "https://www.facebook.com/Emilios-Greek-Restaurant-127944187301672/",
     "location": {
       "lat": 53.0023613,
       "lng": -1.1294101
     },
     "phone": "0115 926 2550",
     "title": "Emilio’s Greek Restaurant",
-    "delivers": true,
-    "collect": true,
-    "facebook": "https://www.facebook.com/Emilios-Greek-Restaurant-127944187301672/",
     "website": "https://www.emiliosgreekrestaurant.co.uk/"
   },
   {
     "facebook": "https://www.facebook.com/FeedMeFullyLoaded",
-    "offline": true,
     "location": false,
+    "offline": true,
     "title": "Feed Me! Fully Loaded",
     "website": "https://www.feedmefullyloaded.com/"
   },
@@ -475,31 +460,39 @@
     "website": "https://www.ginza-nottingham.com/"
   },
   {
+    "blurb": "A truly independent, traditional, family Farm shop specialising in home reared meat & local produce.",
+    "collect": true,
+    "facebook": "https://www.facebook.com/HarkersFarmShop/",
     "title": "Harkers Farm Shop",
     "types": [
       "greengrocer"
     ],
-    "collect": true,
-    "blurb": "A truly independent, traditional, family Farm shop specialising in home reared meat & local produce.",
-    "facebook": "https://www.facebook.com/HarkersFarmShop/",
     "website": "http://www.harkersfarmshop.co.uk/"
   },
   {
+    "blurb": "Lovely little café located just off the marketplace in Kegworth offering take away only.",
+    "collect": true,
     "facebook": "https://www.facebook.com/hiddengemkitchen/",
     "location": {
       "lat": 52.8358905,
       "lng": -1.2790617
     },
-    "blurb": "Lovely little café located just off the marketplace in Kegworth offering take away only.",
     "phone": "07549 306319",
-    "collect": true,
     "title": "Hidden Gem Kitchen"
   },
   {
+    "offline": true,
     "title": "Home bake shop",
-    "website": "http://www.homebakeshop.co.uk/",
     "twitter": "https://twitter.com/homebakeshop",
-    "offline": true
+    "website": "http://www.homebakeshop.co.uk/"
+  },
+  {
+    "blurb": "Treats and cakes at the forest recreation ground.",
+    "collect": true,
+    "facebook": "https://www.facebook.com/Homemadecafe/",
+    "instagram": "https://www.instagram.com/homemadecafe/",
+    "title": "Home made cafe",
+    "website": "https://www.homemadecafe.com/"
   },
   {
     "delivers": false,
@@ -546,13 +539,13 @@
     "title": "Jamadeli"
   },
   {
+    "collect": true,
+    "delivers": true,
     "facebook": "https://www.facebook.com/Joes-Cafe-Colwick-2397876140252104/",
     "location": {
       "lat": 52.9601213,
       "lng": -1.0827286
     },
-    "delivers": true,
-    "collect": true,
     "phone": "07796101798",
     "title": "Joe's Cafe Colwick"
   },
@@ -566,23 +559,23 @@
     "website": "https://kaffeehaus.co.uk/"
   },
   {
+    "blurb": "A local family business delivering Fruit and Vegetables, Meat, Fish and much more",
+    "delivers": true,
     "location": {
       "lat": 52.9214286,
       "lng": -1.0288016
     },
     "title": "Kerry's Fresh",
-    "delivers": true,
-    "blurb": "A local family business delivering Fruit and Vegetables, Meat, Fish and much more",
     "website": "https://www.kerrysfresh.co.uk/"
   },
   {
+    "blurb": "Korean food in Beeston offering take away only currently.",
+    "collect": true,
     "facebook": "https://www.facebook.com/pg/koreahousebeeston",
     "location": {
       "lat": 52.929513,
       "lng": -1.211005
     },
-    "collect": true,
-    "blurb": "Korean food in Beeston offering take away only currently.",
     "phone": "0115 967 7566",
     "title": "Korea House Restaurant"
   },
@@ -618,15 +611,15 @@
     "title": "Lady Jayne's Tearoom"
   },
   {
-    "facebook": "https://www.facebook.com/lardertree/",
+    "blurb": "Local supplier of hand delivered fruit and vegetables. Also supplying milk, eggs, cereals and water to home or work!",
     "collect": true,
     "delivers": true,
-    "blurb": "Local supplier of hand delivered fruit and vegetables. Also supplying milk, eggs, cereals and water to home or work!",
-    "phone": "0115 981 0100",
+    "facebook": "https://www.facebook.com/lardertree/",
     "location": {
       "lat": 52.94496050000001,
       "lng": -1.1347406
     },
+    "phone": "0115 981 0100",
     "title": "Larder Tree",
     "website": "http://lardertree.co.uk/"
   },
@@ -639,9 +632,9 @@
     "website": "https://www.cheflouisaellis.com/"
   },
   {
-    "facebook": "https://www.facebook.com/Luigis-160101700672151/",
     "blurb": "Luigi's Ristorante in Arnold serving Italian cuisine.",
     "delivers": true,
+    "facebook": "https://www.facebook.com/Luigis-160101700672151/",
     "title": "Luigi's"
   },
   {
@@ -650,14 +643,23 @@
     "website": "https://luisasveganchocolates.co.uk/"
   },
   {
+    "blurb": "Ethical festival cafe, falafel stall doing deliveries free to nottingham",
+    "delivers": true,
+    "facebook": "https://www.facebook.com/MagpieBrewery/",
+    "postage": true,
+    "title": "Magpie Brewery",
+    "twitter": "https://twitter.com/MagpieBrewery",
+    "website": "http://www.magpiebrewery.com/"
+  },
+  {
+    "collect": true,
+    "delivers": true,
+    "facebook": "https://www.facebook.com/maxeysfarm/",
+    "phone": "01636 814566",
     "title": "Maxeys Farm Shop",
     "types": [
       "greengrocer"
     ],
-    "delivers": true,
-    "collect": true,
-    "phone": "01636 814566",
-    "facebook": "https://www.facebook.com/maxeysfarm/",
     "website": "https://www.maxeysfarmshop.co.uk/"
   },
   {
@@ -695,40 +697,38 @@
     "website": "https://www.no12nottingham.co.uk/"
   },
   {
+    "collect": true,
+    "deliver": true,
+    "facebook": "https://www.facebook.com/pages/category/Fast-Food-Restaurant/No-1-COB-SHOP-245530869486597/",
+    "offline": true,
+    "title": "No.1 Cob Shop"
+  },
+  {
+    "facebook": "https://www.facebook.com/No8deli/",
     "location": {
       "lat": 52.9304705,
       "lng": -1.1256107
     },
-    "title": "Number 8 Deli",
     "offline": true,
-    "facebook": "https://www.facebook.com/No8deli/",
+    "title": "Number 8 Deli",
     "twitter": "https://twitter.com/number8deli",
     "website": "http://www.no8deli.co.uk/"
   },
   {
-    "delivers": true,
-    "postage": true,
-    "title": "Magpie Brewery",
-    "blurb": "Ethical festival cafe, falafel stall doing deliveries free to nottingham",
-    "website": "http://www.magpiebrewery.com/",
-    "twitter": "https://twitter.com/MagpieBrewery",
-    "facebook": "https://www.facebook.com/MagpieBrewery/"
-  },
-  {
-    "delivers": true,
-    "title": "Numinums",
     "blurb": "Ethical festival cafe, falafel stall doing deliveries",
+    "delivers": true,
+    "facebook": "https://www.facebook.com/NuminumsCafe/",
     "instagram": "https://www.instagram.com/numinums_cafe/",
-    "facebook": "https://www.facebook.com/NuminumsCafe/"
+    "title": "Numinums"
   },
   {
+    "blurb": "Burger joint offering collection after booking via phone, discounts for NHS",
+    "collect": true,
+    "facebook": "https://www.facebook.com/pages/category/Burger-Restaurant/Ohannes-Burger-UK-110446866989701/",
     "location": {
       "lat": 53.0011339,
       "lng": -1.1306648
     },
-    "blurb": "Burger joint offering collection after booking via phone, discounts for NHS",
-    "facebook": "https://www.facebook.com/pages/category/Burger-Restaurant/Ohannes-Burger-UK-110446866989701/",
-    "collect": true,
     "phone": "01156761818",
     "title": "Ohannes Burgers"
   },
@@ -745,22 +745,22 @@
     "website": "https://www.okende.com/"
   },
   {
+    "blurb": "Beeston bakery offering boozy cakes",
     "delivers": true,
     "facebook": "https://www.facebook.com/oozeeboozeebakes/",
-    "blurb": "Beeston bakery offering boozy cakes",
+    "title": "Oozee Boozee Bakes",
     "types": [
       "bakery"
-    ],
-    "title": "Oozee Boozee Bakes"
+    ]
   },
   {
+    "blurb": "Local coffee roaster supplying fair trade coffees",
     "location": {
       "lat": 52.9534396,
       "lng": -1.1437684
     },
     "postage": true,
     "title": "Outpost coffee",
-    "blurb": "Local coffee roaster supplying fair trade coffees",
     "types": [
       "coffee"
     ],
@@ -771,8 +771,8 @@
       "lat": 52.99729749999999,
       "lng": -1.1369581
     },
-    "title": "Plastic Free Pantry",
     "offline": true,
+    "title": "Plastic Free Pantry",
     "website": "https://plasticfreepantry.co.uk/"
   },
   {
@@ -788,10 +788,10 @@
     "title": "Prickly Pear"
   },
   {
-    "facebook": "https://www.facebook.com/Pistachionottingham/",
     "blurb": "A family run Persian restaurant with a modern twist.",
-    "website": "https://www.pistachionottingham.co.uk/",
-    "title": "Pstachio"
+    "facebook": "https://www.facebook.com/Pistachionottingham/",
+    "title": "Pstachio",
+    "website": "https://www.pistachionottingham.co.uk/"
   },
   {
     "location": {
@@ -846,13 +846,21 @@
     "title": "Sora Japanese Kitchen"
   },
   {
-    "title": "Spring lane farm shop",
-    "twitter": "https://twitter.com/SpringLaneFS",
     "blurb": "Spring Lane Farm Shop is a traditional, family run farm shop offering collection.",
     "collect": true,
     "facebook": "https://www.facebook.com/springlanefarmshop",
     "phone": "01159267624",
+    "title": "Spring lane farm shop",
+    "twitter": "https://twitter.com/SpringLaneFS",
     "website": "https://www.springlanefarmshop.co.uk/"
+  },
+  {
+    "blurb": "Trent bridge brewed coffee offering website delivery.",
+    "facebook": "https://www.facebook.com/StewartsCoffees/",
+    "instagram": "https://www.instagram.com/stewartscoffeesuk/",
+    "postage": true,
+    "title": "Stewarts Coffee",
+    "website": "https://www.stewartscoffees.co.uk/"
   },
   {
     "delivers": true,
@@ -864,12 +872,12 @@
     "website": "https://www.studio-chocolate.co.uk/"
   },
   {
-    "title": "Thaymar Dairy Ice Cream",
-    "website": "https://www.thaymaricecream.co.uk",
-    "phone": "01623 858887",
     "blurb": "Farm shop offering collection of meals.",
     "collect": true,
-    "instagram": "https://www.instagram.com/thaymar_ice_cream/"
+    "instagram": "https://www.instagram.com/thaymar_ice_cream/",
+    "phone": "01623 858887",
+    "title": "Thaymar Dairy Ice Cream",
+    "website": "https://www.thaymaricecream.co.uk"
   },
   {
     "facebook": "https://www.facebook.com/BeestonBrownieCo/",
@@ -918,50 +926,50 @@
     "website": "https://thecountryvictualler.co.uk/"
   },
   {
+    "offline": true,
     "title": "The Friendly Farmer",
     "types": [
       "greengrocer"
     ],
-    "offline": true,
     "website": "http://www.friendlyfarmer.co.uk/"
   },
   {
+    "blurb": "Greengrocers offering delivery of fruit, veg and other items.",
     "delivers": true,
     "location": {
       "lat": 52.93055889999999,
       "lng": -1.1255994
     },
-    "blurb": "Greengrocers offering delivery of fruit, veg and other items.",
     "title": "The Fruit Basket",
     "twitter": "https://twitter.com/NFBdirect",
     "website": "http://www.thefruitbasketdirect.uk/"
   },
   {
+    "blurb": "Fruit and vegtable shop in Mapperley.",
     "collect": true,
     "title": "The Fruit Bowl",
-    "blurb": "Fruit and vegtable shop in Mapperley.",
     "website": "https://www.facebook.com/The-Fruit-Bowl-Mapperley-1597571230463340/"
   },
   {
-    "delivers": true,
+    "blurb": "Beeston tapas bar and restaurant offering takeout and delivery.",
     "collect": true,
-    "phone": "0115 922 8300",
+    "delivers": true,
     "location": {
       "lat": 52.9232004,
       "lng": -1.2196913
     },
-    "blurb": "Beeston tapas bar and restaurant offering takeout and delivery.",
-    "website": "https://www.thefrustratedchef.co.uk/",
-    "title": "The Frustrated Chef"
+    "phone": "0115 922 8300",
+    "title": "The Frustrated Chef",
+    "website": "https://www.thefrustratedchef.co.uk/"
   },
   {
-    "facebook": "https://facebook.com/TheGedlingInn/",
     "collect": true,
-    "phone": "0115 987 8686",
+    "facebook": "https://facebook.com/TheGedlingInn/",
     "location": {
       "lat": 52.9748514,
       "lng": -1.0807171
     },
+    "phone": "0115 987 8686",
     "title": "The Gedling Inn"
   },
   {
@@ -976,8 +984,8 @@
   {
     "blurb": "Local chef offering salads and other meals for delivery.",
     "delivers": true,
-    "instagram": "https://www.instagram.com/littlebrickhouse_cafe/",
     "facebook": "https://www.facebook.com/theLittleBrickhouse/",
+    "instagram": "https://www.instagram.com/littlebrickhouse_cafe/",
     "location": {
       "lat": 52.9821083,
       "lng": -1.1452747
@@ -989,8 +997,8 @@
       "lat": 52.9869444,
       "lng": -1.035
     },
-    "title": "The Nelson Burton Joyce",
     "offline": true,
+    "title": "The Nelson Burton Joyce",
     "website": "https://lordnelsonpubandkitchen.co.uk/"
   },
   {
@@ -1015,35 +1023,42 @@
     "website": "http://www.thepuddingpantry.co.uk/"
   },
   {
-    "title": "The Real Milk Company",
-    "collect": true,
     "blurb": "The Real Milk Company sells fresh, pasteurised milk, free range eggs, ice cream, bread & cakes straight from the farm",
+    "collect": true,
     "facebook": "https://www.facebook.com/realmilkcompany/",
+    "title": "The Real Milk Company",
     "website": "http://www.therealmilkcompany.com"
   },
   {
-    "title": "The Red Lion",
-    "offline": true,
     "blurb": "Pub in thurgaton offering essential meals and supplies for collection.",
     "instagram": "https://www.instagram.com/redlionthurgarton/",
+    "offline": true,
+    "title": "The Red Lion",
     "website": "http://www.redlionthurgarton.co.uk/"
   },
   {
+    "blurb": "Local meal prep and dining experience foodies that are offering freezable bulk cooking.",
+    "delivery": true,
     "facebook": "https://www.facebook.com/thesensorykitchen/",
+    "instagram": "https://www.instagram.com/thesensorykitchen/",
     "location": {
       "lat": 52.949234,
       "lng": -1.1827506
     },
-    "delivery": true,
-    "postage": true,
     "phone": "07771 610908",
-    "instagram": "https://www.instagram.com/thesensorykitchen/",
-    "blurb": "Local meal prep and dining experience foodies that are offering freezable bulk cooking.",
+    "postage": true,
     "title": "The Sensory kitchen"
   },
   {
     "title": "The Snobby Butcher",
     "website": "https://www.johnnypusztai.com/"
+  },
+  {
+    "blurb": "Nottingham pour it yourself bar, now taking orders online via their website.",
+    "delivers": "true",
+    "facebook": "https://www.facebook.com/TheTapHouseNotts/",
+    "title": "The Tap House",
+    "website": "http://thetaphousenotts.co.uk/online-shop/"
   },
   {
     "delivers": true,
@@ -1066,17 +1081,10 @@
     "website": "https://www.thewollaton.co.uk/"
   },
   {
-    "offline": true,
     "facebook": "https://www.facebook.com/thompsonbrothersgreengrocers/",
+    "offline": true,
     "title": "Thompson Brothers",
     "website": "https://www.thompson-brothers.co.uk/"
-  },
-  {
-    "delivers": "true",
-    "title": "The Tap House",
-    "blurb": "Nottingham pour it yourself bar, now taking orders online via their website.",
-    "facebook": "https://www.facebook.com/TheTapHouseNotts/",
-    "website": "http://thetaphousenotts.co.uk/online-shop/"
   },
   {
     "location": {
@@ -1103,12 +1111,12 @@
     "website": "http://www.toughmarysbakehouse.co.uk/"
   },
   {
-    "title": "Trinity Farm Shop",
     "collect": true,
+    "facebook": "https://www.facebook.com/trinity.farm.9",
+    "title": "Trinity Farm Shop",
     "types": [
       "greengrocer"
     ],
-    "facebook": "https://www.facebook.com/trinity.farm.9",
     "website": "http://www.trinityfarm.co.uk/"
   },
   {
@@ -1131,11 +1139,11 @@
     "title": "Viva Street Food"
   },
   {
+    "blurb": "Farm shop in Worksop supplying deli style food",
     "collect": true,
     "facebook": "https://www.facebook.com/WelbeckCourtyard/",
     "phone": "01909 478 725",
     "title": "Welbeck Farm Shop",
-    "blurb": "Farm shop in Worksop supplying deli style food",
     "twitter": "https://twitter.com/welbeckfarmshop",
     "types": [
       "greengrocer",
@@ -1172,13 +1180,13 @@
   },
   {
     "delivers": true,
-    "offline": true,
-    "twitter": "https://twitter.com/ZaapThai",
     "location": {
       "lat": 52.9531006,
       "lng": -1.1534866
     },
+    "offline": true,
     "title": "Zaap Thai Street Food",
+    "twitter": "https://twitter.com/ZaapThai",
     "website": "http://www.zaapthai.co.uk/"
   }
 ]
