@@ -1,5 +1,12 @@
 [
   {
+    "offline": true,
+    "title": "Black Iris Brewery",
+    "website": "https://twitter.com/blackirisbrewer",
+    "facebook": "https://www.facebook.com/blackiris.brewery/",
+    "purchase": "https://www.neonraptorbrewingco.com/shop"
+  },
+  {
     "blurb": "Online beer shop based in Nottingham. Supplying beer from local breweries to local customers.",
     "collect": false,
     "location": false,
@@ -1122,6 +1129,7 @@
   },
   {
     "blurb": "Pub with supplies and also take away Sunday dinners",
+    "offline": true,
     "collect": true,
     "delivers": true,
     "location": {
