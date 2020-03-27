@@ -326,6 +326,13 @@
     "title": "Cornerstone Pizza"
   },
   {
+    "blurb": "Delivering essentials, meat and potatoes in Beeston and around Nottingham.",
+    "delivers": true,
+    "facebook": "https://www.facebook.com/johndawsonbutchers/",
+    "phone": "0115 925 5101",
+    "title": "Craig Dawson Butchers"
+  },
+  {
     "delivers": true,
     "location": {
       "lat": 52.90589319999999,
@@ -566,7 +573,7 @@
     "website": "https://kaffeehaus.co.uk/"
   },
   {
-    "blurb": "A local family business delivering Fruit and Vegetables, Meat, Fish and much more",
+    "blurb": "A local family business delivering Fruit and Vegetables, Meat, Fish and other essentials.",
     "delivers": true,
     "location": {
       "lat": 52.9214286,
@@ -668,6 +675,14 @@
       "greengrocer"
     ],
     "website": "https://www.maxeysfarmshop.co.uk/"
+  },
+  {
+    "blurb": "Family run butchers in the heart of the midlands established in 1935",
+    "collect": true,
+    "delivers": true,
+    "phone": "01636 370 556",
+    "title": "Meat and Co",
+    "website": "https://www.meatandco.co.uk/"
   },
   {
     "facebook": "https://facebook.com/memsaabnottingham/",
@@ -807,6 +822,12 @@
     },
     "title": "R B Wholesale",
     "website": "http://www.rbwholesale.co.uk/"
+  },
+  {
+    "delivers": true,
+    "facebook": "https://www.facebook.com/Raw-fruit-veg-402854009849461/",
+    "phone": "01949 831077",
+    "title": "Raw Fruit & Veg"
   },
   {
     "delivers": true,
@@ -955,6 +976,7 @@
       "lat": 52.93055889999999,
       "lng": -1.1255994
     },
+    "phone": "0115 784 1579",
     "title": "The Fruit Basket",
     "twitter": "https://twitter.com/NFBdirect",
     "website": "http://www.thefruitbasketdirect.uk/"
