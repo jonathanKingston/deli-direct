@@ -156,9 +156,13 @@ body .leaflet-container a.leaflet-popup-close-button {
   top: 4px;
 }
 
-.cardcontents .website:before,
-.cardcontents .map:before {
+.cardcontents .website:before {
   background: url('/icons/website.svg');
+  background-size: cover;
+}
+
+.cardcontents .map:before {
+  background: url('/icons/map.svg');
   background-size: cover;
 }
 
