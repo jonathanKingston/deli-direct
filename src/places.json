@@ -1183,6 +1183,15 @@
     "title": "Viva Street Food"
   },
   {
+    "blurb": "Speciality wine shop delivering in Nottingham.",
+    "delivers": true,
+    "facebook": "https://www.facebook.com/Weavers-Wines-120002801370966/",
+    "phone": "0115 958 0922",
+    "title": "Weavers wine",
+    "twitter": "https://twitter.com/weaverswines",
+    "website": "https://www.weaverswines.com/"
+  },
+  {
     "blurb": "Farm shop in Worksop supplying deli style food",
     "collect": true,
     "facebook": "https://www.facebook.com/WelbeckCourtyard/",
