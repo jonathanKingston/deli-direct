@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>check-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 24 0 24 24 0 24"></polygon>
+    </defs>
+    <g id="check-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3-Copy">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M11.1776743,17.6993874 L6.42462531,12.5916712 L7.69629886,11.4083288 L11.0776675,15.0421093 L17.6340635,6.83899186 L18.9909785,7.9234432 L11.1776743,17.6993874 Z M11.999938,0 C5.3725695,0 0,5.37250097 0,11.999938 C0,18.627375 5.3725695,24 11.999938,24 C18.6274305,24 24,18.627375 24,11.999938 C24,5.37250097 18.6274305,0 11.999938,0 L11.999938,0 Z" id="Fill-1" fill="#028EB0" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
