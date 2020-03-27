@@ -7,7 +7,7 @@
     "init": "rm -rf dist && git clone --single-branch --branch gh-pages git@github.com:jonathanKingston/deli-direct.git dist && cd dist",
     "serve": "npm run build && http-server dist/",
     "build": "cd dist && git rm -rf * && cd ../ && node -r esm ./scripts/generate.js",
-    "publish": "git add . && git commit -m "Latest build" && git push",
+    "publish": "git add . && git commit -m \"Latest build\" && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
