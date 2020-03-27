@@ -1,4 +1,4 @@
-const CACHE_NAME = "b1eeb09d-6153-4b8d-9337-7f423e83955d"; let urlsToCache = [
+const CACHE_NAME = "3f45a885-90d8-486e-a09c-cf678200ccf0"; let urlsToCache = [
   "/",
   "/manifest.webmanifest",
   "/output.js",
