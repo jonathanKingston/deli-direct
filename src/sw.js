@@ -1,9 +1,7 @@
-const CACHE_NAME = "cache-v11";
 let urlsToCache = [
   "/",
   "/manifest.webmanifest",
-  "/places.json",
-  "/index.js",
+  "/output.js",
   "/style.css",
   "/icons/website.svg",
   "/icons/phone.svg",

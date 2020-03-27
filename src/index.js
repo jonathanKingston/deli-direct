@@ -3,14 +3,6 @@ const nottingham = [
   -1.1549223
 ];
 
-async function getPlaces() {
-  let request = new Request("places.json");
-  request.mode = "no-cors";
-  let response = await fetch(request);
-  let data = await response.json();
-  return data;
-}
-
 function createLink(text, link, className) {
   return `<a href="${link}" class="${className}" rel="noopener noreferrer" target="_blank">${text}</a>`;
 }
@@ -43,7 +35,7 @@ function placeCard(place, showMap) {
   let map = "";
   if (showMap && place.location) {
     let maplink = `https://www.google.com/maps/search/?api=1&query=${place.location.lat},${place.location.lng}`;
-    map = createLink("Visit Map", maplink, "map");
+    map = createLink("Open Map", maplink, "map");
   }
   return `<div class="cardcontents">
     <h2>${place.title}</h2>
@@ -62,10 +54,9 @@ function placeCard(place, showMap) {
 }
 
 async function init() {
-  let places = await getPlaces();
   let toggleElement = getToggleElement();
   toggleElement.addEventListener("click", toggleView);
-  initListView(places);
+  initListView();
 
   changePreloadStyles();
   if ("serviceWorker" in navigator) {
@@ -86,6 +77,10 @@ function getListElement() {
   return document.getElementById("list");
 }
 
+function getListFilterElement() {
+  return document.getElementById("listFilter");
+}
+
 function getMapElement() {
   return document.getElementById("map");
 }
@@ -97,34 +92,44 @@ function getToggleElement() {
 let currentView = "list";
 
 async function toggleView() {
-  let places = await getPlaces();
   let mapElement = getMapElement();
   let listElement = getListElement();
+  let listFilterElement = getListFilterElement();
   let toggleElement = getToggleElement();
   if (currentView == "list") {
     currentView = "map";
     toggleElement.innerText = "List view";
     mapElement.removeAttribute("hidden");
     listElement.setAttribute("hidden", "");
-    initMap(places);
+    listFilterElement.setAttribute("hidden", "");
+    initMap();
   } else {
     currentView = "list";
     toggleElement.innerText = "Map view";
+    listFilterElement.removeAttribute("hidden");
     listElement.removeAttribute("hidden");
     mapElement.setAttribute("hidden", "");
-    initListView(places);
+    initListView();
   }
 }
 
-function initListView(places) {
+function initListView() {
+  getListFilterElement().addEventListener("change", () => {
+    renderPlaces();
+  });
+  renderPlaces();
+}
+
+function renderPlaces() {
   let listElement = getListElement();
   listElement.innerHTML = "";
   for (let place of places) {
-    if (place.offline) {
+    let delivers = place.delivers || place.postage;
+    let collect = place.collect;
+    if (!deliversFilter.checked && !collect) {
       continue;
     }
-    // Skip any that don't have offerings
-    if (!(place.delivers || place.postage || place.collect)) {
+    if (!collectFilter.checked && !delivers) {
       continue;
     }
     let placeContent = placeCard(place, true);
@@ -135,16 +140,9 @@ function initListView(places) {
   }
 }
 
-function initMap(places) {
+function initMap() {
   let placePointers = L.layerGroup();
   for (let place of places) {
-    if (place.offline) {
-      continue;
-    }
-    // Skip any that don't have offerings
-    if (!(place.delivers || place.postage || place.collect)) {
-      continue;
-    }
     if (place.location) {
       let popupContent = placeCard(place, false);
       L.marker([place.location.lat, place.location.lng]).bindPopup(popupContent).addTo(placePointers);
