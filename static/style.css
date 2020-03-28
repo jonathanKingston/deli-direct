@@ -27,6 +27,19 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Public Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
+  margin-bottom:  0.363em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.454em;
+  margin-bottom:  1em;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 header {
@@ -38,14 +51,63 @@ header {
 
 header h1 {
   font-size: 2.545em;
-  padding-left: 1em;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1em;
 }
 
-#toggleView {
-  font-size: 1.636em;
+header nav {
+  display: flex;
+  height: 100%;
+}
+
+header nav a {
+  /* Sit the button just over the line */
+  position: relative;
+  top: 0.75px;
+
+  display: flex;
+  font-size: 1.454em;
+  font-weight: 600;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 2em;
+  color: #535353;
+  border-bottom: 3px solid transparent;
+}
+
+header nav a.selected {
+  border-bottom-color: #019A78;
+}
+
+form {
+  max-width: 34em;
+}
+
+form > div {
   margin: 1em;
-  cursor: pointer;
+}
+
+form label {
+  display: block;
+}
+
+form input, form textarea {
+  border: 0.75px solid #d8d8d8;
+}
+
+.sidebyside {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebyside section {
+  max-width: 26em;
+  margin: 2em;
+}
+.sidebyside aside {
 }
 
 main, #map {
@@ -173,13 +235,6 @@ body .leaflet-container a.leaflet-popup-close-button {
 
 .cardcontents h2 {
   font-size: 1.636em;
-  padding-bottom:  0.363em;
-}
-
-.cardcontents p {
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.454em;
 }
 
 .cardcontents dl {

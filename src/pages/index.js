@@ -1,0 +1,40 @@
+export const details = {
+  "canonical": "/",
+  "description": "deli direct finds local companies offering supplies to those in need",
+  "title": "Places listings"
+};
+
+export function render(props) {
+  return `
+  <form id="listFilter">
+    <legend>Filter</legend>
+    <div>
+      <input type="checkbox" name="delivers" checked id="deliversFilter" />
+      <label for="deliversFilter">Delivers</label>
+      <input type="checkbox" name="collect" checked id="collectFilter" />
+      <label for="collectFilter">Collect</label>
+    </div>
+  </form>
+  <div id="list"></div>
+  `;
+}
+
+export function init() {
+  let listElement = getListElement();
+  listElement.innerHTML = "";
+  for (let place of places) {
+    let delivers = place.delivers || place.postage;
+    let collect = place.collect;
+    if (!deliversFilter.checked && !collect) {
+      continue;
+    }
+    if (!collectFilter.checked && !delivers) {
+      continue;
+    }
+    let placeContent = placeCard(place, true);
+    let placeCardElement = document.createElement("div");
+    placeCardElement.className = "card";
+    placeCardElement.innerHTML = placeContent;
+    listElement.appendChild(placeCardElement);
+  }
+}
