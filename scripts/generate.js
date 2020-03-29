@@ -22,7 +22,7 @@ let copyRecursiveSync = function(src, dest) {
 };
 copyRecursiveSync("static", "dist/");
 
-let rawdata = fs.readFileSync("src/places.json");
+let rawdata = fs.readFileSync("data/src/places.json");
 let places = JSON.parse(rawdata);
 let outputItems = [];
 for (let place of places) {

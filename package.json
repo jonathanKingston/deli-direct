@@ -4,15 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "audit-places": "cat src/places.json | jq 'sort_by(.title)' --sort-keys > tmp.json && mv tmp.json src/places.json",
-    "init": "rm -rf dist && git clone --single-branch --branch gh-pages git@github.com:jonathanKingston/deli-direct.git dist && cd dist",
+    "init": "./scripts/init.sh",
     "serve": "node ./scripts/serve.js",
     "build": "cd dist && git rm --ignore-unmatch -rf * && cd ../ && node -r esm ./scripts/generate.js",
     "publish": "cd dist && git add . && git commit -m \"Latest build\" && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Kingston",
   "dependencies": {
     "uuid": "^7.0.2"
   },

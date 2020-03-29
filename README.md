@@ -14,14 +14,6 @@ npm install
 To run the site, see Serve
 
 
-## Audit places
-
-Sorts the places.json file, later will audit all the data for validity.
-
-```
-npm run audit-places
-```
-
 ## Init
 
 Initialise the `dist/` directory with the github pages branch. This is used to deploy.
