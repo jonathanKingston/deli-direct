@@ -27,14 +27,14 @@ export function render(props) {
         Stay safe.
     </section>
     <aside>
-      <h2>Add your business to Deli Direct</h2>
       <form id="collectForm">
+        <h2>Add your business to Deli Direct</h2>
         <div>
           <label for="businessName">Business name*</label>
           <input name="title" id="businessName" required>
         </div>
         <div>
-          <label for="contactName">Contact*</label>
+          <label for="contactName">Contact name*</label>
           <input name="contact" id="contactName" required>
         </div>
         <div>
@@ -48,23 +48,23 @@ export function render(props) {
         </div>
         <div>
           <label for="phoneNumber">Business phone number</label>
-          <input type="tel" name="phone" id="phoneNumber" required>
+          <input type="tel" name="phone" id="phoneNumber">
         </div>
         <div>
           <label for="website">Business website</label>
-          <input name="website" id="website" required>
+          <input name="website" id="website">
         </div>
         <div>
           <label for="instagram">Instagram</label>
-          <input type="url" name="instagram" id="instagram" required>
+          <input type="url" name="instagram" id="instagram">
         </div>
         <div>
           <label for="facebook">Facebook</label>
-          <input type="url" name="facebook" id="facebook" required>
+          <input type="url" name="facebook" id="facebook">
         </div>
         <div>
           <label for="twitter">Twitter</label>
-          <input type="url" name="twitter" id="twitter" required>
+          <input type="url" name="twitter" id="twitter">
         </div>
         <div>
           <label for="businessType">Business type</label>
@@ -81,23 +81,34 @@ export function render(props) {
         </div>
         <div>
           <label for="deliveroo">Deliveroo</label>
-          <input type="url" name="deliveroo" id="deliveroo" required>
+          <input type="url" name="deliveroo" id="deliveroo">
         </div>
         <div>
           <label for="justeat">Just-Eat</label>
-          <input type="url" name="justeat" id="justeat" required>
+          <input type="url" name="justeat" id="justeat">
         </div>
-        <button>
-          Submit
-        </button>
+        <div>
+          <button>
+            Submit
+          </button>
+        </div>
       </form>
+      <div id="formSuccess" hidden>
+        <h3>Thank you!</h3>
+
+        <p>Thank you for submitting your business information to Deli Direct.
+        <p>If you are submitting a new region (outside of Nottingham)—hold tight! Once we have gathered enough businesses for a new region, we will add it to our listings section on the site.
+
+        <p>As we are a small team, we also appreciate your patience as we review each new submission. We will reach out if there are any issues.
+
+        <p>If you think you have made a mistake or need to make any changes, please contact us.
+      </div>
     </aside>
   </div>
   `;
 }
 
 export function init() {
-console.log("hey");
   let collectForm = document.getElementById("collectForm");
   collectForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -116,5 +127,7 @@ console.log("hey");
       credentials: "omit",
       mode: "no-cors",
     });
+    collectForm.setAttribute("hidden", "");
+    formSuccess.removeAttribute("hidden");
   });
 }
