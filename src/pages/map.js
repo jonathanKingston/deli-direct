@@ -10,6 +10,7 @@ export function render(props) {
 }
 
 export function init() {
+  showFilter();
   window.addEventListener("load", () => {
     let placePointers = L.layerGroup();
     for (let place of places) {

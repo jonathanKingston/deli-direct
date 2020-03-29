@@ -3,6 +3,7 @@ export function render(props) {
     if (props.page == page) {
       return `class="selected"`;
     }
+    return "";
   }
   let canonicalPath = props.canonical || "/" + props.page;
   return `
@@ -29,7 +30,21 @@ export function render(props) {
         </nav>
       </header>
       <main>
-        <a href="/" ${pageSelected("index")}>List</a>
-        <a href="/map" ${pageSelected("map")}>Map</a>
+        <nav id="filter" hidden>
+          <h2>Nottingham, United Kingdom</h2>
+          <form id="listFilter" hidden>
+            <legend>Filter</legend>
+
+            <input type="checkbox" name="delivers" checked id="deliversFilter" />
+            <label for="deliversFilter">Delivers</label>
+
+            <input type="checkbox" name="collect" checked id="collectFilter" />
+            <label for="collectFilter">Collect</label>
+          </form>
+          <ul>
+            <li class="list"><a href="/" ${pageSelected("index")} >List</a>
+            <li class="map"><a href="/map" ${pageSelected("map")} >Map</a>
+          </ul>
+        </nav>
   `;
 }

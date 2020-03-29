@@ -80,8 +80,9 @@ function changePreloadStyles() {
   }
 }
 
-function getListElement() {
-  return document.getElementById("list");
+function showFilter() {
+  let filterElement = document.getElementById("filter");
+  filterElement.removeAttribute("hidden");
 }
 
 function getListFilterElement() {

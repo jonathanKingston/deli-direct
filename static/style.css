@@ -107,6 +107,7 @@ form input, form textarea {
   max-width: 26em;
   margin: 2em;
 }
+
 .sidebyside aside {
 }
 
@@ -115,17 +116,124 @@ main, #map {
 	height: 100%;
 }
 
-#listFilter {
-  margin-left: 2.545em;
+#filter {
+  padding: 2em;
+  display: flex;
+  border-bottom: 0.75px solid #d8d8d8;
 }
 
-#listFilter div {
+#filter h2 {
+  padding-left: 2em;
+  margin-right: auto;
+}
+
+#filter ul {
+  display: flex; 
+}
+
+#filter li {
+  list-style-type: none;
+}
+
+#filter ul a {
+  padding: 1em;
+  border: 0.75px solid #d8d8d8;
+  text-decoration: none;
+  color: #535353;
+}
+
+#filter ul li .selected {
+  color: #fff;
+  border-color: #019A78;
+  background: #019A78;
+}
+
+#filter ul .list a::before,
+#filter ul .map a::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.363em;
+  position: relative;
+  top: 4px;
+}
+
+#filter ul .map a::before,
+#filter ul .list a::before {
+  background: #535353;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+#filter ul .map .selected::before,
+#filter ul .list .selected::before {
+  background: #fff;
+}
+
+#filter ul .map a::before {
+  -webkit-mask-image: url('/icons/map.svg');
+  mask-image: url('/icons/map.svg');
+}
+
+#filter ul .list a::before {
+  -webkit-mask-image: url('/icons/list.svg');
+  mask-image: url('/icons/list.svg');
+}
+
+#filter ul li:first-child a {
+  border-right: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+#filter ul li:last-child a {
+  border-left: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+#listFilter {
   display: flex;
 }
 
-#listFilter label {
-  margin-right: 0.5em;
+#listFilter legend,
+#listFilter label,
+#listFilter input {
+  display: flex;
+  align-items: center;
 }
+
+#listFilter legend {
+  margin-right: 2em;
+}
+
+#listFilter input[type='checkbox'] {
+  width: 100px;
+  -webkit-appearance: none;
+  border: 0.75px solid #d8d8d8;
+  border-radius: 20px;
+  outline: none;
+}
+
+#listFilter input[type='checkbox'] + label {
+  margin-left: -100px;
+  width: 100px;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+#listFilter input[type='checkbox']:checked {
+  border-color: #019A78;
+  background: #019A78;
+}
+
+#listFilter input[type='checkbox']:checked + label {
+  color: #fff;
+}
+
 
 #list {
   display: flex;
@@ -177,6 +285,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents {
+  /* TODO: do we need this still? */
   width: calc(20em - 2.908em);
 }
 
