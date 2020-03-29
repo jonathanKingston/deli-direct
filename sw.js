@@ -1,4 +1,4 @@
-const CACHE_NAME = "aa8a81c9-065c-4ed6-b824-1dba82c76708"; let urlsToCache = [
+const CACHE_NAME = "eede7e04-ba70-46e7-a4eb-76d8107723ee"; let urlsToCache = [
   "/",
   "/manifest.webmanifest",
   "/output.js",
@@ -13,6 +13,7 @@ const CACHE_NAME = "aa8a81c9-065c-4ed6-b824-1dba82c76708"; let urlsToCache = [
 ];
 
 self.addEventListener("install", function (event) {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function (cache) {
