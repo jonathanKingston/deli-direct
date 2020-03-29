@@ -13,21 +13,29 @@ export function render(props) {
 export function init() {
   showFilter();
   let listElement = document.getElementById("list");
-  getListFilterElement().removeAttribute("hidden");
-  listElement.innerHTML = "";
-  for (let place of places) {
-    let delivers = place.delivers || place.postage;
-    let collect = place.collect;
-    if (!deliversFilter.checked && !collect) {
-      continue;
+  let listFilterElement = getListFilterElement();
+  listFilterElement.removeAttribute("hidden");
+  listFilterElement.addEventListener("change", () => {
+    renderPlaces();
+  });
+
+  function renderPlaces() {
+    listElement.innerHTML = "";
+    for (let place of places) {
+      let delivers = place.delivers || place.postage;
+      let collect = place.collect;
+      if (!deliversFilter.checked && !collect) {
+        continue;
+      }
+      if (!collectFilter.checked && !delivers) {
+        continue;
+      }
+      let placeContent = placeCard(place, true);
+      let placeCardElement = document.createElement("div");
+      placeCardElement.className = "card";
+      placeCardElement.innerHTML = placeContent;
+      listElement.appendChild(placeCardElement);
     }
-    if (!collectFilter.checked && !delivers) {
-      continue;
-    }
-    let placeContent = placeCard(place, true);
-    let placeCardElement = document.createElement("div");
-    placeCardElement.className = "card";
-    placeCardElement.innerHTML = placeContent;
-    listElement.appendChild(placeCardElement);
   }
+  renderPlaces();
 }
