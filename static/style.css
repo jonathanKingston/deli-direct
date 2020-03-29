@@ -134,6 +134,7 @@ button {
 
 .sidebyside {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
