@@ -43,6 +43,7 @@ function change(type, fileName) {
 fs.watch("./static", change);
 fs.watch("./src", change);
 fs.watch("./src/pages", change);
+fs.watch("./data/src", change);
 
 build();
 serve();
