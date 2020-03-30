@@ -17,11 +17,12 @@ html, body, body .leaflet-container {
 }
 
 a {
-  color: #028eb0;
+  color: #019A78;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #016f8a;
+  color: #1F3348;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,8 +32,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+  font-family: 'Georgia', Times, serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.454em;
   margin-bottom:  1em;
 }
@@ -143,6 +145,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 3.125em;
 }
 
 .sidebyside section {
@@ -176,7 +179,15 @@ button:hover {
   margin-right: 0.5em;
 }
 
-.sidebyside h1,
+.sidebyside h1 {
+  font-family: 'Poppins', Helvetica, san-sans-serif;
+  font-size: 3em;
+  line-height: 1.1em;
+  letter-spacing: -.02em;
+  color: #1e3348;
+  margin-bottom: 1em;
+}
+
 .sidebyside h2,
 .sidebyside h3 {
   color: #1e3348;
@@ -203,7 +214,7 @@ main, #map {
 }
 
 #filter ul {
-  display: flex; 
+  display: flex;
   margin: auto 2em auto 0;
   height: 2.5em;
 }
