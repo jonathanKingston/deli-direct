@@ -110,21 +110,36 @@ form {
 }
 
 form > div {
-  margin: 1em;
+  margin: 1em 0 2em 0;
 }
 
 form label {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   display: block;
+  color: #1F3348;
+  font-size: 1.125em;
+  padding-bottom: .3em;
 }
 
 form input, form textarea {
+  font-size: 1.125em;
+  font-family: 'Georgia', Times, serif;
   border: 0.75px solid #d8d8d8;
   border-radius: 2px;
+  width: 100%;
+}
+
+form select {
+  padding: 1em;
 }
 
 form input {
-  padding: 0.5em;
+  padding: .8em;
+}
+
+
+#blurb {
+  padding: .8em;
 }
 
 form input:focus,
@@ -135,12 +150,13 @@ form textarea:focus {
 
 button,
 .button {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  height: 2.5em;
-  width: 113px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 1em;
+  height: 3.125em;
+  width: 11em;
   -webkit-appearance: none;
   border: 0.75px solid #d8d8d8;
-  border-radius: 20px;
+  border-radius: 30px;
   border-color: #019A78;
   color: #fff;
   background: #019A78;
@@ -161,7 +177,7 @@ button:focus,
 button:hover {
   color: #fff;
   outline: none;
-  background: #1D6857;
+  background: #1F3348;
   cursor: pointer;
 }
 
@@ -169,6 +185,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 3.125em;
 }
 
 .sidebyside section {
@@ -227,10 +244,19 @@ section.intro {
   margin-right: 0.5em;
 }
 
-.sidebyside h1,
+.sidebyside h1 {
+  font-family: 'Poppins', Helvetica, san-sans-serif;
+  font-size: 3em;
+  line-height: 1.1em;
+  letter-spacing: -.02em;
+  color: #1e3348;
+  margin-bottom: 1em;
+}
+
 .sidebyside h2,
 .sidebyside h3 {
   color: #1e3348;
+  margin-bottom: 2em;
 }
 
 main, #map {
@@ -337,6 +363,8 @@ main, #map {
 #listFilter input {
   display: flex;
   align-items: center;
+  padding: 0;
+  font-size: 1rem;
 }
 
 #listFilter legend {
@@ -346,7 +374,7 @@ main, #map {
 }
 
 #listFilter input[type='checkbox'] {
-  height: 2.5em;
+  height: 2.187rem;
   width: 113px;
   -webkit-appearance: none;
   border: 0.75px solid #d8d8d8;
