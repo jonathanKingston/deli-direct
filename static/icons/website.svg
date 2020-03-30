@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>Website-icon</title>
+    <title>website</title>
     <desc>Created with Sketch.</desc>
-    <g id="Website-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-        <path d="M9.58945798,9.69879518 L10.9978437,12.8485734 L8.31977744,14.1795401 L6.8852022,10.9711903 L4.5,13.4902009 L4.5,1.88936199 L13.3188157,9.69879518 L9.58945798,9.69879518 Z" id="Web-Icon" stroke="#028EB0"></path>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map" transform="translate(1.000000, 1.000000)" stroke="#019A78" stroke-width="1.5">
+            <path d="M18.0180744,16.7213855 L20.093125,21.5027522 L16.13026,23.53193 L14.0213887,18.6726333 L10.5,22.5042649 L10.5,4.86296244 L23.4972873,16.7213855 L18.0180744,16.7213855 Z" id="Web-Icon" stroke-linejoin="round"></path>
+            <circle id="Oval-Copy" cx="15" cy="15" r="15"></circle>
+        </g>
     </g>
 </svg>
