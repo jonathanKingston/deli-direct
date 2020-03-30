@@ -43,8 +43,9 @@ export function render(props) {
           </textarea>
         </div>
         <div>
-          <label for="googleMap">Google map url*</label>
-          <input type="url" name="location" id="googleMap" required>
+          <label for="address">Business Address*</label>
+          <textarea name="address" id="address" required>
+          </textarea>
         </div>
         <div>
           <label for="phoneNumber">Business phone number</label>
