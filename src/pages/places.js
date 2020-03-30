@@ -1,6 +1,6 @@
 export const details = {
-  "description": "deli direct finds local companies offering supplies to those in need",
-  "title": "Find local Nottingham food & drink independent places"
+  "description": "Listing local independent businesses in Nottingham available or collection or delivery.",
+  "title": "Listing Nottingham food & drink independents"
 };
 
 export function render(props) {
