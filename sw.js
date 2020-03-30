@@ -1,5 +1,7 @@
-const CACHE_NAME = "c6d0318e-2a6d-4fd6-9d1a-5af4d36a9659"; let urlsToCache = [
+const CACHE_NAME = "51ecf56a-1901-4b0f-8c57-3ed324036514"; let urlsToCache = [
   "/",
+  "/places",
+  "/about",
   "/manifest.webmanifest",
   "/output.js",
   "/style.css",

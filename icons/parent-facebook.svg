@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>facebook-icon-green</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 9.75 0 9.75 18 0 18"></polygon>
+    </defs>
+    <g id="facebook-icon-green" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-14-Copy-2" transform="translate(1.000000, 1.000000)">
+            <g id="Group-13">
+                <g id="Group-11">
+                    <g id="Group-3" transform="translate(10.125000, 6.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M9.11108832,10.0484853 L9.6163614,6.8153215 L6.45551055,6.8153215 L6.45551055,4.71751559 C6.45551055,3.83291877 6.89694353,2.97087541 8.31283175,2.97087541 L9.75,2.97087541 L9.75,0.218350906 C9.75,0.218350906 8.44561915,0 7.19877951,0 C4.59529526,0 2.89374389,1.5483368 2.89374389,4.35131423 L2.89374389,6.8153215 L0,6.8153215 L0,10.0484853 L2.89374389,10.0484853 L2.89374389,17.864011 C3.47409292,17.9533895 4.06874214,18 4.67462722,18 C5.28051229,18 5.87516151,17.9533895 6.45551055,17.864011 L6.45551055,10.0484853 L9.11108832,10.0484853 Z" id="Fill-1" fill="#019A78" mask="url(#mask-2)"></path>
+                    </g>
+                    <circle id="Oval-Copy" stroke="#019A78" stroke-width="1.5" cx="15" cy="15" r="15"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
