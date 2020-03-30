@@ -25,7 +25,7 @@ export function render(props) {
       <header>
         <h1><a href="/">deli direct</a></h1>
         <nav>
-          <a href="/" ${pageSelected("index")}>The Places</a>
+          <a href="/places" ${pageSelected("places")}>The Places</a>
           <a href="/about" ${pageSelected("about")}>About Us</a>
         </nav>
       </header>
@@ -42,7 +42,7 @@ export function render(props) {
             <label for="collectFilter">Collect</label>
           </form>
           <ul>
-            <li class="list"><a href="/" ${pageSelected("index")} >List</a>
+            <li class="list"><a href="/places" ${pageSelected("places")} >List</a>
             <li class="map"><a href="/map" ${pageSelected("map")} >Map</a>
           </ul>
         </nav>

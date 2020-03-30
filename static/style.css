@@ -5,10 +5,16 @@
   box-sizing: border-box;
 }
 
+.center {
+  margin: 0 auto;
+  max-width: 54%;
+  min-width: 20em;
+}
+
 html, body, body .leaflet-container {
 	height: 100%;
 	margin: 0;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 16px;
 }
 
@@ -28,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 700;
   margin-bottom:  0.363em;
+  line-height: 1.2em;
 }
 
 p {
@@ -66,6 +73,7 @@ header h1 a {
 }
 
 header nav {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   display: flex;
   height: 100%;
 }
@@ -103,6 +111,7 @@ form > div {
 }
 
 form label {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   display: block;
 }
 
@@ -121,7 +130,9 @@ form textarea:focus {
   outline-color: #019A78;
 }
 
-button {
+button,
+.button {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   height: 2.5em;
   width: 113px;
   -webkit-appearance: none;
@@ -130,10 +141,22 @@ button {
   border-color: #019A78;
   color: #fff;
   background: #019A78;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
+.button {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  padding: 0.55em 2.5em;
+  text-decoration: none;
+}
+
+.button:hover,
 button:focus,
 button:hover {
+  color: #fff;
   outline: none;
   background: #176755;
   cursor: pointer;
@@ -154,6 +177,31 @@ button:hover {
   max-width: 26em;
   margin: 2em;
 }
+
+.sidebyside aside img {
+  width: 100%;
+}
+
+section.intro {
+  max-width: 29em;
+  margin: auto 0;
+}
+
+@media screen and (max-width: 700px) {
+  section.intro {
+    max-width: 29em;
+    margin: 2em;
+  }
+}
+
+.intro h1 {
+  font-size: 2.8em;
+}
+
+.intro p {
+  font-size: 1.2em;
+}
+
 
 #formSuccess {
   background: #f3f6ff;
@@ -184,12 +232,15 @@ button:hover {
 
 main, #map {
 	width: 100%;
-	height: 100%;
-  /* TODO hack, for supporting browsers ignore the menu height */
-  height: calc(100% - 70px);
+  height: auto;
+}
+
+#map {
+  height: calc(100vh - 140px);
 }
 
 #filter {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   height: 4.375em;
   display: flex;
   border-bottom: 0.75px solid #d8d8d8;
@@ -450,6 +501,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents dl {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 0.727em;
@@ -500,4 +552,75 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .icons .instagram {
   background: url('/icons/instagram.svg');
   background-size: cover;
+}
+
+footer {
+  border-top: 0.75px solid #d8d8d8;
+}
+
+footer .center {
+  padding: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer nav {
+  margin: 2em auto;
+}
+
+footer nav ul,
+footer nav li {
+  margin-bottom: 1em;
+}
+
+footer nav ul a {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+footer .menu ul a,
+footer h4 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #525252;
+}
+
+footer .icons {
+  display: flex;
+}
+
+footer .icons a {
+  display: inline-block;
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0 0.5em 0 0;
+  text-indent: -99999px;
+}
+
+footer .facebook {
+  background: url('/icons/parent-facebook.svg');
+  background-size: cover;
+}
+
+footer .twitter {
+  background: url('/icons/parent-twitter.svg');
+  background-size: cover;
+}
+
+footer .instagram {
+  background: url('/icons/parent-instagram.svg');
+  background-size: cover;
+}
+
+footer section {
+  max-width: 27em;
+  background: #f3f6ff;
+  padding: 2em;
+  border-radius: 1em;
 }
