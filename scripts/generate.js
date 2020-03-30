@@ -17,10 +17,32 @@ let copyRecursiveSync = function(src, dest) {
                         path.join(dest, childItemName));
     });
   } else {
-    fs.copyFileSync(src, dest);
+    copyFile(src, dest);
   }
 };
 copyRecursiveSync("static", "dist/");
+
+const postcss = require('postcss');
+const postcssPresetEnv = require('postcss-preset-env');
+const CSS_PATH = "./static/style.css";
+
+function copyFile(src, dest) {
+  if (src.match(/[.]css$/)) {
+    let out = path.join(path.dirname(dest), path.basename(src));
+    fs.readFile(src, (err, css) => {
+      postcss([postcssPresetEnv()])
+        .process(css, { from: src, to: out })
+        .then(result => {
+          fs.writeFile(out, result.css, () => true)
+          if ( result.map ) {
+            fs.writeFile(out, result.map, () => true)
+          }
+        })
+    });
+  } else {
+    fs.copyFileSync(src, dest);
+  }
+}
 
 let rawdata = fs.readFileSync("data/src/places.json");
 let places = JSON.parse(rawdata);

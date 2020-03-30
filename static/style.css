@@ -1,7 +1,13 @@
+:root {
+  --main-color: #525252;
+  --main-font: Georgia, Times, 'Times New Roman', serif;
+  --heading-font: 'Poppins', Helvetica, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
-  color: #525252;
+  color: var(--main-color);
   box-sizing: border-box;
 }
 
@@ -14,7 +20,7 @@
 html, body, body .leaflet-container {
 	height: 100%;
 	margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--main-font);
   font-size: 16px;
   letter-spacing: .009em;
 }
@@ -33,14 +39,14 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font);
   font-weight: 700;
   margin-bottom:  0.363em;
   line-height: 1.2em;
 }
 
 p {
-  font-family: 'Georgia', Times, serif;
+  font-family: var(--main-font);
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.454em;
@@ -76,7 +82,7 @@ header h1 a {
 }
 
 header nav {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font);
   display: flex;
   height: 100%;
 }
@@ -114,7 +120,7 @@ form > div {
 }
 
 form label {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font);
   display: block;
   color: #1F3348;
   font-size: 1.125em;
@@ -123,7 +129,7 @@ form label {
 
 form input, form textarea {
   font-size: 1.125em;
-  font-family: 'Georgia', Times, serif;
+  font-family: var(--main-font);
   border: 0.75px solid #d8d8d8;
   border-radius: 2px;
   width: 100%;
@@ -150,7 +156,7 @@ form textarea:focus {
 
 button,
 .button {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: var(--heading-font);
   font-size: 1em;
   height: 3.125em;
   width: 11em;
@@ -245,7 +251,7 @@ section.intro {
 }
 
 .sidebyside h1 {
-  font-family: 'Poppins', Helvetica, san-sans-serif;
+  font-family: var(--heading-font);
   font-size: 3em;
   line-height: 1.1em;
   letter-spacing: -.02em;
@@ -269,7 +275,7 @@ main, #map {
 }
 
 #filter {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font);
   height: 4.375em;
   display: flex;
   border-bottom: 0.75px solid #d8d8d8;
@@ -297,7 +303,7 @@ main, #map {
   padding: 0.245em;
   border: 0.75px solid #d8d8d8;
   text-decoration: none;
-  color: #525252;
+  color: var(--main-color);
 }
 
 #filter ul li .selected {
@@ -319,7 +325,7 @@ main, #map {
 
 #filter ul .map a::before,
 #filter ul .list a::before {
-  background: #525252;
+  background: var(--main-color);
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -440,7 +446,7 @@ body .leaflet-popup-content {
 
 body .leaflet-popup-content-wrapper,
 .card {
-  color: #525252;
+  color: var(--main-color);
   padding: 2.181em 1.454em 1.454em 1.454em;
   width: 22em;
   border: 0.75px solid #d8d8d8;
@@ -471,11 +477,6 @@ body .leaflet-container a.leaflet-popup-close-button {
   right: 14px;
 }
 
-/*.cardcontents {
-  /* TODO: do we need this still?
-  width: calc(20em - 2.908em);
-}*/
-
 @media screen and (max-width: 800px) {
   .card {
     font-size: 13px;
@@ -492,7 +493,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .website {
   display: block;
   margin-bottom: 0.363em;
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: var(--heading-font);
   font-weight: 500;
   letter-spacing: .3px;
 }
@@ -538,7 +539,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents dl {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font);
   display: flex;
   flex-wrap: wrap;
 }
@@ -622,7 +623,7 @@ footer nav li {
 }
 
 footer nav ul a {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font);
   text-decoration: none;
 }
 
@@ -631,7 +632,7 @@ footer h4 {
   text-transform: uppercase;
   font-size: 0.9em;
   font-weight: 700;
-  color: #525252;
+  color: var(--main-color);
 }
 
 footer .icons {
