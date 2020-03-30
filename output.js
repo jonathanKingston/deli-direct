@@ -143,7 +143,7 @@ let places = [{"blurb":"Online beer shop based in Nottingham. Supplying beer fro
     </div>
   `;
 },
-      details: {"canonical":"/","description":"deli direct finds local companies offering supplies to those in need","title":"Find local Nottingham food & drink independent places","page":"index"},
+      details: {"canonical":"/","description":"Deli Direct finds local companies offering supplies to those in need","title":"Find local Nottingham food & drink independent places","page":"index"},
       
     },"/map": {
       render(props) {
@@ -184,7 +184,7 @@ let places = [{"blurb":"Online beer shop based in Nottingham. Supplying beer fro
     <div id="list"></div>
   `;
 },
-      details: {"description":"deli direct finds local companies offering supplies to those in need","title":"Find local Nottingham food & drink independent places","page":"places"},
+      details: {"description":"Listing local independent businesses in Nottingham available or collection or delivery.","title":"Listing Nottingham food & drink independents","page":"places"},
       init() {
   showFilter();
   let listElement = document.getElementById("list");
