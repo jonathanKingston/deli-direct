@@ -1,7 +1,7 @@
 :root {
   --main-color: #525252;
-  --main-font: Georgia, Times, 'Times New Roman', serif;
-  --heading-font: 'Poppins', Helvetica, sans-serif;
+  --main-font: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  --heading-font: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 * {
