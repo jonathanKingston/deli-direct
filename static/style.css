@@ -10,6 +10,7 @@ html, body, body .leaflet-container {
 	margin: 0;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-size: 16px;
+  letter-spacing: .009em;
 }
 
 [hidden] {
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: georgia;
+  font-family: 'Georgia', Times, serif;
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.454em;
@@ -344,7 +345,7 @@ main, #map {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 3.125em;
 }
 
 /* Leaflet style */
@@ -418,7 +419,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents .phone {
-  color: #525252;
+  color: #019A78;
   text-decoration: none;
   font-weight: 300;
 }
@@ -460,20 +461,21 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents dl {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 0.727em;
 }
 
 .cardcontents dl div {
   display: flex;
-  margin-right: 1em;
+  margin-right: .9em;
   align-items: center;
+  margin-bottom: 0.727em;
 }
 
 .cardcontents dl dt {
   font-weight: 700;
   color: #1F3348;
-  font-size: 1em;
-  letter-spacing: .1px;
+  font-size: .82em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .cardcontents dl dd {
@@ -482,20 +484,21 @@ body .leaflet-container a.leaflet-popup-close-button {
   font-size: 1em;
   color: #1F3348;
   background-color: #F3F6FF;
-  padding: 4px 14px 4px 14px;
+  padding: .25em .875em .25em .875em;
   border-radius: 16px;
+
 }
 
 .cardcontents .icons {
-  margin-top: 1em;
+  margin-top: 1.5em;
   display: flex;
 }
 
 .cardcontents .icons a {
-  margin-right: 0.5em;
+  margin-right: 1em;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 2em;
+  height: 2em;
   text-indent: -999999px;
 }
 
