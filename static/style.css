@@ -17,11 +17,12 @@ html, body, body .leaflet-container {
 }
 
 a {
-  color: #028eb0;
+  color: #019A78;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #016f8a;
+  color: #1F3348;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,8 +32,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+  font-family: georgia;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.454em;
   margin-bottom:  1em;
 }
@@ -135,7 +137,7 @@ button {
 button:focus,
 button:hover {
   outline: none;
-  background: #176755;
+  background: #1D6857;
   cursor: pointer;
 }
 
@@ -203,7 +205,7 @@ main, #map {
 }
 
 #filter ul {
-  display: flex; 
+  display: flex;
   margin: auto 2em auto 0;
   height: 2.5em;
 }
@@ -342,6 +344,7 @@ main, #map {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 50px;
 }
 
 /* Leaflet style */
@@ -359,10 +362,11 @@ body .leaflet-popup-content-wrapper,
 .card {
   color: #525252;
   padding: 2.181em 1.454em 1.454em 1.454em;
-  width: 20em;
+  width: 22em;
   border: 0.75px solid #d8d8d8;
   border-radius: 3px;
   margin: 1em;
+  border-top: 4px #019A78 solid;
 }
 
 body .leaflet-popup-content-wrapper {
@@ -387,10 +391,10 @@ body .leaflet-container a.leaflet-popup-close-button {
   right: 14px;
 }
 
-.cardcontents {
-  /* TODO: do we need this still? */
+/*.cardcontents {
+  /* TODO: do we need this still?
   width: calc(20em - 2.908em);
-}
+}*/
 
 @media screen and (max-width: 800px) {
   .card {
@@ -408,8 +412,9 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .website {
   display: block;
   margin-bottom: 0.363em;
-  font-family: 'Public Sans', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: .3px;
 }
 
 .cardcontents .phone {
@@ -446,7 +451,10 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents h2 {
-  font-size: 1.636em;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #1F3348;
+  line-height: 1.4em;
 }
 
 .cardcontents dl {
@@ -462,16 +470,20 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents dl dt {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 0.818em;
+  font-weight: 700;
+  color: #1F3348;
+  font-size: 1em;
+  letter-spacing: .1px;
 }
 
 .cardcontents dl dd {
   margin-left: 0.5em;
   font-weight: 500;
-  font-size: 0.909em;
+  font-size: 1em;
+  color: #1F3348;
+  background-color: #F3F6FF;
+  padding: 4px 14px 4px 14px;
+  border-radius: 16px;
 }
 
 .cardcontents .icons {
@@ -482,8 +494,8 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .icons a {
   margin-right: 0.5em;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   text-indent: -999999px;
 }
 
