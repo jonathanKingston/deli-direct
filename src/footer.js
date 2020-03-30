@@ -24,7 +24,7 @@ export function render(props) {
           <ul class="icons">
             <li><a href="https://www.facebook.com/delidirectuk/" rel="noopener" target="_blank" class="facebook">delidirectuk</a>
             <li><a href="https://twitter.com/deli_direct_uk" rel="noopener" target="_blank" class="twitter">@deli_direct_uk</a>
-            <li><a href="https://www.instagram.com/delid_direct" rel="noopener" target="_blank" class="instagram">@deli_direct</a>
+            <li><a href="https://www.instagram.com/deli_direct" rel="noopener" target="_blank" class="instagram">@deli_direct</a>
           </ul>
         </nav>
       </div>
