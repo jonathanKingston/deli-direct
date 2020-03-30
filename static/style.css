@@ -127,7 +127,7 @@ form label {
   padding-bottom: .3em;
 }
 
-form input, form textarea {
+form input, form textarea, form select {
   font-size: 1.125em;
   font-family: var(--main-font);
   border: 0.75px solid #d8d8d8;
@@ -136,7 +136,10 @@ form input, form textarea {
 }
 
 form select {
-  padding: 1em;
+  padding: 1rem;
+  appearance: none;
+  font-family: var(--heading-font);
+  background: url('icons/arrow.svg') 96% / 6% no-repeat #fff;
 }
 
 form input {
