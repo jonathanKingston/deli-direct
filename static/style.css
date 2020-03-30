@@ -101,20 +101,31 @@ form {
 }
 
 form > div {
-  margin: 1em;
+  margin: 1em 0 2em 0;
 }
 
 form label {
   display: block;
+  color: #1F3348;
+  font-size: 1.125em;
+  padding-bottom: .3em;
 }
 
 form input, form textarea {
+  font-size: 1.125em;
+  font-family: 'Georgia', Times, serif;
   border: 0.75px solid #d8d8d8;
   border-radius: 2px;
+  width: 100%;
 }
 
 form input {
-  padding: 0.5em;
+  padding: .8em;
+}
+
+
+#blurb {
+  padding: .8em;
 }
 
 form input:focus,
@@ -124,11 +135,13 @@ form textarea:focus {
 }
 
 button {
-  height: 2.5em;
-  width: 113px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 1em;
+  height: 3.125em;
+  width: 11em;
   -webkit-appearance: none;
   border: 0.75px solid #d8d8d8;
-  border-radius: 20px;
+  border-radius: 30px;
   border-color: #019A78;
   color: #fff;
   background: #019A78;
@@ -137,7 +150,7 @@ button {
 button:focus,
 button:hover {
   outline: none;
-  background: #176755;
+  background: #1F3348;
   cursor: pointer;
 }
 
@@ -191,6 +204,7 @@ button:hover {
 .sidebyside h2,
 .sidebyside h3 {
   color: #1e3348;
+  margin-bottom: 2em;
 }
 
 main, #map {
