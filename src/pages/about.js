@@ -8,14 +8,14 @@ export function render(props) {
   <div class="sidebyside">
     <section>
       <h1>
-        A place to connect communities with their local businesses
+        A place to connect people with their independent shops
       </h1>
       
       <p>
-        Deli Direct is a platform that connects customers with local businesses. Launching first in Nottingham, England, we aim to track the availability of local small providers impacted by the outbreak and to connect those in need.
+        Deli Direct is a site that connects food and drink lovers with local businesses. Launching first in Nottingham UK, we aim to track the availability of small providers impacted by the outbreak.
       
       <p>
-        Currently, we are focusing on listing high quality deli, food, and drink suppliers in Nottingham, England—but we are hoping to quickly expand to other regions, countries, and additional business catergories as soon as possible.
+        We are focused on listing high quality deli, food, and drink suppliers in Nottingham. Find local craft beer, delicatessen, farm shops and bakeries that are available to deliver or take away.
       
       <p>
         <b>If you are interested in adding your business to the site, please fill in the form on this page. We are accepting submissions of all business types and in all regions. Titles with an (*) are required fields.</b>
