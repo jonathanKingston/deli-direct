@@ -479,12 +479,12 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .phone:before,
 .cardcontents .map:before {
   content: "";
-  width: 1.454em;
-  height: 1.454em;
+  width: 2em;
+  height: 2em;
   margin-right: 0.363em;
   display: inline-block;
   position: relative;
-  top: 4px;
+  top: 12px;
 }
 
 .cardcontents .website:before {
