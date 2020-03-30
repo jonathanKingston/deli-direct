@@ -497,8 +497,8 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .icons a {
   margin-right: 1em;
   display: block;
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   text-indent: -999999px;
 }
 
