@@ -1,5 +1,7 @@
 let urlsToCache = [
   "/",
+  "/places",
+  "/about",
   "/manifest.webmanifest",
   "/output.js",
   "/style.css",
