@@ -48,7 +48,7 @@ let rawdata = fs.readFileSync("data/src/places.json");
 let places = JSON.parse(rawdata);
 let outputItems = [];
 for (let place of places) {
-  if (place.offline) {
+  if (place.offline || place.outofscope) {
     continue;
   }
   // ignore if we don't have functionality
