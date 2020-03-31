@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="map" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-9-Copy-3" transform="translate(1.000000, 1.000000)" stroke="#019A78" stroke-width="1.5">
-            <g id="Group-7-Copy">
-                <circle id="Oval" cx="15" cy="15" r="15"></circle>
-            </g>
-            <path d="M15.0769231,14.7692308 C13.8661829,14.7692308 12.8846154,13.7876633 12.8846154,12.5771445 C12.8846154,11.3664043 13.8661829,10.3846154 15.0769231,10.3846154 C16.2876633,10.3846154 17.2692308,11.3664043 17.2692308,12.5771445 C17.2692308,13.7876633 16.2876633,14.7692308 15.0769231,14.7692308 Z M15.0769231,6 C11.4444902,6 8.5,8.80224279 8.5,12.2591939 C8.5,16.712351 13.3263848,22.9015116 15.0769231,25 C16.8274614,22.9015116 21.6538462,16.712351 21.6538462,12.2591939 C21.6538462,8.80224279 18.7091162,6 15.0769231,6 Z" id="Stroke-1" stroke-linejoin="round"></path>
-        </g>
-    </g>
-</svg>
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><g stroke="#019A78" stroke-width="1.5" fill="none" fill-rule="evenodd"><circle cx="15" cy="15" r="15" transform="translate(1 1)"/><path d="M16.077 15.77a2.192 2.192 0 110-4.385 2.192 2.192 0 010 4.384zm0-8.77C12.444 7 9.5 9.802 9.5 13.26c0 4.452 4.826 10.642 6.577 12.74 1.75-2.098 6.577-8.288 6.577-12.74 0-3.458-2.945-6.26-6.577-6.26z" stroke-linejoin="round"/></g></svg>

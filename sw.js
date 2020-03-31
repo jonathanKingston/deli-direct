@@ -1,4 +1,4 @@
-const CACHE_NAME = "06af0223-5c32-4f56-aaa5-86d1ebae8dfe"; let urlsToCache = [
+const CACHE_NAME = "de90d399-e625-407c-a43e-8c1702299177"; let urlsToCache = [
   "/",
   "/places",
   "/about",
