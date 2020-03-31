@@ -1,7 +1,7 @@
 :root {
   --main-color: #525252;
-  --main-font: Georgia, Times, 'Times New Roman', serif;
-  --heading-font: 'Poppins', Helvetica, sans-serif;
+  --main-font: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  --heading-font: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -21,7 +21,7 @@
 html, body, body .leaflet-container {
 	height: 100%;
 	margin: 0;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   font-family: var(--main-font);
   font-size: 16px;
   letter-spacing: .009em;
@@ -41,7 +41,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   font-weight: 700;
   margin-bottom:  0.363em;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 1.2em;
@@ -86,7 +86,7 @@ header h1 a {
 }
 
 header nav {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   display: flex;
   height: 100%;
@@ -125,7 +125,7 @@ form > div {
 }
 
 form label {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   display: block;
   color: #1F3348;
@@ -135,7 +135,7 @@ form label {
 
 form input, form textarea, form select {
   font-size: 1.125em;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   font-family: var(--main-font);
   border: 0.75px solid #d8d8d8;
   border-radius: 2px;
@@ -147,7 +147,7 @@ form select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   background: url('icons/arrow.svg') 96% / 6% no-repeat #fff;
 }
@@ -169,7 +169,7 @@ form textarea:focus {
 
 button,
 .button {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   font-size: 1em;
   height: 3.125em;
@@ -265,7 +265,7 @@ section.intro {
 }
 
 .sidebyside h1 {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   font-size: 3em;
   line-height: 1.1em;
@@ -290,7 +290,7 @@ main, #map {
 }
 
 #filter {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   height: 4.375em;
   display: flex;
@@ -516,7 +516,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .website {
   display: block;
   margin-bottom: 0.363em;
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   font-weight: 500;
   letter-spacing: .3px;
@@ -532,12 +532,12 @@ body .leaflet-container a.leaflet-popup-close-button {
 .cardcontents .phone:before,
 .cardcontents .map:before {
   content: "";
-  width: 1.454em;
-  height: 1.454em;
+  width: 2em;
+  height: 2em;
   margin-right: 0.363em;
   display: inline-block;
   position: relative;
-  top: 4px;
+  top: 12px;
 }
 
 .cardcontents .website:before {
@@ -563,7 +563,7 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 .cardcontents dl {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   display: flex;
   flex-wrap: wrap;
@@ -648,7 +648,7 @@ footer nav li {
 }
 
 footer nav ul a {
-  font-family: 'Poppins', Helvetica, sans-serif;
+  font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-family: var(--heading-font);
   text-decoration: none;
 }
