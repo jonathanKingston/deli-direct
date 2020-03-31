@@ -2,6 +2,7 @@
 import { v4 as uuidv4 } from "uuid";
 const fs = require("fs");
 const path = require("path");
+let outputPaths = [];
 
 let copyRecursiveSync = function(src, dest) {
   let exists = fs.existsSync(src);
@@ -26,14 +27,17 @@ const postcss = require('postcss');
 const postcssPresetEnv = require('postcss-preset-env');
 const CSS_PATH = "./static/style.css";
 
+
 function copyFile(src, dest) {
+  let out = path.join(path.dirname(dest), path.basename(src));
+  outputPaths.push(out);
+
   if (src.match(/[.]css$/)) {
-    let out = path.join(path.dirname(dest), path.basename(src));
     fs.readFile(src, (err, css) => {
       postcss([postcssPresetEnv()])
         .process(css, { from: src, to: out })
         .then(result => {
-          fs.writeFile(out, result.css, () => true)
+          fs.writeFileSync(out, result.css, () => true)
           if ( result.map ) {
             fs.writeFile(out, result.map, () => true)
           }
@@ -46,7 +50,7 @@ function copyFile(src, dest) {
 
 let rawdata = fs.readFileSync("data/src/places.json");
 let places = JSON.parse(rawdata);
-let outputItems = [];
+let outputPlaces = [];
 for (let place of places) {
   if (place.offline || place.outofscope) {
     continue;
@@ -55,12 +59,8 @@ for (let place of places) {
   if (!(place.delivers || place.postage || place.collect)) {
     continue;
   }
-  outputItems.push(place);
+  outputPlaces.push(place);
 }
-
-let rawSw = fs.readFileSync("src/sw.js");
-let key = uuidv4();
-fs.writeFileSync("dist/sw.js", `const CACHE_NAME = "${key}"; ${rawSw}`);
 
 import { render as renderHeader } from "../src/header.js";
 import { render as renderFooter } from "../src/footer.js";
@@ -91,10 +91,13 @@ async function generatePages() {
     let header = renderHeader(details);
     let page = render(details);
     let footer = renderFooter(details);
-    fs.writeFileSync(`dist/${pageName}.html`, `${header}${page}${footer}`.replace(/\s+/g, " "));
+    let out = `dist/${pageName}.html`;
+    outputPaths.push(out);
+    fs.writeFileSync(out, `${header}${page}${footer}`.replace(/\s+/g, " "));
   }
   
-  let output = `let places = ${JSON.stringify(outputItems)};`;
+  // Now add the places list to the js files
+  let output = `let places = ${JSON.stringify(outputPlaces)};`;
   output += `let paths = {`;
   for (let path in paths) {
     output += `"${path}": ${paths[path]},`;
@@ -102,6 +105,30 @@ async function generatePages() {
   output += `};`;
 
   let mainJs = fs.readFileSync("src/main.js");
-  fs.writeFileSync("dist/output.js", output + mainJs);
+  let out = "dist/output.js";
+  fs.writeFileSync(out, output + mainJs);
+  outputPaths.push(out);
 }
-generatePages();
+
+async function init() {
+  await generatePages();
+
+  // Do some munging of paths and ignore common files we don't care about in the SW
+  outputPaths = outputPaths
+    .map((dir) => {
+      return dir.replace(/^dist\//, "/").replace(/index\.html/, "").replace(/\.html$/, "");
+    })
+    .filter((dir) => {
+      if (dir.match(/(CNAME|robots.txt)$/)) {
+        return false;
+      }
+      return true;
+    });
+  let rawSw = fs.readFileSync("src/sw.js");
+  let key = uuidv4();
+  fs.writeFileSync("dist/sw.js", `const CACHE_NAME = "${key}";
+    let urlsToCache = ${JSON.stringify(outputPaths)};
+    ${rawSw}`);
+}
+
+init();

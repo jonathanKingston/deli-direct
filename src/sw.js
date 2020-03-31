@@ -1,18 +1,9 @@
-let urlsToCache = [
-  "/",
-  "/places",
-  "/about",
-  "/manifest.webmanifest",
-  "/output.js",
-  "/style.css",
-  "/icons/website.svg",
-  "/icons/phone.svg",
-  "/icons/facebook.svg",
-  "/icons/twitter.svg",
-  "/icons/instagram.svg",
+let additionalUrlsToCache = [
   "https://unpkg.com/leaflet@1.6.0/dist/leaflet.js",
   "https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
 ];
+urlsToCache = urlsToCache.concat(additionalUrlsToCache);
+
 
 self.addEventListener("install", function (event) {
   self.skipWaiting();
