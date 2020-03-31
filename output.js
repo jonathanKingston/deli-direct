@@ -156,11 +156,19 @@ let places = [{"blurb":"Online beer shop based in Nottingham. Supplying beer fro
       init() {
   showFilter();
   window.addEventListener("load", () => {
+    var customIcon = L.icon({
+    iconUrl: 'icons/marker.svg',
+
+    iconSize:     [24, 24], // size of the icon
+    iconAnchor:   [16, 24], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-4, -23] // point from which the popup should open relative to the iconAnchor
+});
+
     let placePointers = L.layerGroup();
     for (let place of places) {
       if (place.location) {
         let popupContent = placeCard(place, false);
-        L.marker([place.location.lat, place.location.lng]).bindPopup(popupContent).addTo(placePointers);
+        L.marker([place.location.lat, place.location.lng], {icon: customIcon}).bindPopup(popupContent).addTo(placePointers);
       }
     }
   
