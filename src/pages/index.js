@@ -13,7 +13,7 @@ export function render(props) {
       <a class="button" href="/places">Find local places</a>
       </section>
       <aside>
-        <img src="/images/home-image.png" alt="">
+        <img src="/images/home-image.svg" alt="">
       </aside>
     </div>
   `;
