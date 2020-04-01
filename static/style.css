@@ -13,7 +13,7 @@
 
 .center {
   margin: 0 auto;
-  max-width: 54%;
+  max-width: 71%;
   min-width: 20em;
 }
 
@@ -207,13 +207,17 @@ button:hover {
   margin: 2em;
 }
 
-.home.sidebyside aside {
-  max-width: none;
-  width: 35%;
+.home.sidebyside section {
+  margin: auto auto auto 0;
 }
 
-.home.sidebyside section,
 .home.sidebyside aside {
+  margin: 0 0 0 auto;
+  max-width: none;
+  width: 52%;
+}
+
+.home.sidebyside {
   margin-top: 6.25rem;
   margin-bottom: 6.25em;
 }
@@ -222,7 +226,13 @@ button:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
+  .home.sidebyside aside {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 978px) {
   .home.sidebyside aside {
     display: none;
   }
@@ -498,10 +508,13 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 @media screen and (max-width: 800px) {
+  #list {
+    padding-top: 1.5em;
+  }
   .card {
     font-size: 13px;
-    margin: 0.5em;
-    width: 19em;
+    margin: 1em;
+    width: 100%;
   }
   .cardcontents {
     width: calc(19em - 2.908em);
