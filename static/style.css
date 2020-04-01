@@ -1,6 +1,6 @@
 :root {
   --main-color: #525252;
-  --main-font: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  --main-font: Maitree, Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   --heading-font: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -197,6 +197,11 @@ button:hover {
   margin-top: 3.125em;
 }
 
+.home.sidebyside {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25em;
+}
+
 .sidebyside section {
   max-width: 26em;
   margin: 2em;
@@ -207,13 +212,19 @@ button:hover {
   margin: 2em;
 }
 
+.home.sidebyside aside {
+  max-width: none;
+  margin: 0;
+  width: 35%;
+}
+
 .sidebyside aside img {
-  width: 26em;
+  width: 100%;
 }
 
 section.intro {
-  max-width: 29em;
-  margin: auto 0;
+  max-width: 26em;
+  margin: auto 10em auto 0;
 }
 
 @media screen and (max-width: 700px) {
