@@ -35,10 +35,10 @@ export function render(props) {
           <form id="listFilter" hidden>
             <legend>Filter</legend>
 
-            <input type="checkbox" name="delivers" checked id="deliversFilter" />
+            <input type="checkbox" name="delivers" id="deliversFilter" />
             <label for="deliversFilter">Delivery</label>
 
-            <input type="checkbox" name="collect" checked id="collectFilter" />
+            <input type="checkbox" name="collect" id="collectFilter" />
             <label for="collectFilter">Collect</label>
           </form>
           <ul>

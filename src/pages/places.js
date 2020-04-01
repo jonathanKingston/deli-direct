@@ -23,11 +23,14 @@ export function init() {
     for (let place of places) {
       let delivers = place.delivers || place.postage;
       let collect = place.collect;
-      if (!deliversFilter.checked && !collect) {
-        continue;
-      }
-      if (!collectFilter.checked && !delivers) {
-        continue;
+      let hasFilter = deliversFilter.checked || collectFilter.checked;
+      if (hasFilter) {
+        if (deliversFilter.checked && !delivers) {
+          continue;
+        }
+        if (collectFilter.checked && !collect) {
+          continue;
+        }
       }
       let placeContent = placeCard(place, true);
       let placeCardElement = document.createElement("div");
