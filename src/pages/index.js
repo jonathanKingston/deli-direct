@@ -1,7 +1,7 @@
 export const details = {
   "canonical": "/",
   "description": "Deli Direct finds local companies offering supplies to those in need",
-  "title": "Find local Nottingham food & drink independent places"
+  "title": "Find Nottingham food & drink independents"
 };
 
 export function render(props) {
