@@ -368,12 +368,10 @@ main, #map {
 }
 
 #filter ul .map a::before {
-  -webkit-mask-image: url('/icons/map-icon.svg');
-  mask-image: url('/icons/map.svg');
+  mask-image: url('/icons/map-icon.svg');
 }
 
 #filter ul .list a::before {
-  -webkit-mask-image: url('/icons/list.svg');
   mask-image: url('/icons/list.svg');
 }
 
