@@ -1,6 +1,6 @@
 :root {
   --main-color: #525252;
-  --main-font: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  --main-font: Maitree, Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   --heading-font: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -14,14 +14,14 @@
 
 .center {
   margin: 0 auto;
-  max-width: 54%;
+  max-width: 71%;
   min-width: 20em;
 }
 
 html, body, body .leaflet-container {
 	height: 100%;
 	margin: 0;
-  font-family: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  font-family: Maitree, Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   font-family: var(--main-font);
   font-size: 16px;
   letter-spacing: .009em;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-family: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  font-family: Maitree, Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 1.2em;
@@ -135,7 +135,7 @@ form label {
 
 form input, form textarea, form select {
   font-size: 1.125em;
-  font-family: Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
+  font-family: Maitree, Georgia TimesNewRoman, 'Times New Roman', Times, Baskerville, serif;
   font-family: var(--main-font);
   border: 0.75px solid #d8d8d8;
   border-radius: 2px;
@@ -218,13 +218,40 @@ button:hover {
   margin: 2em;
 }
 
+.home.sidebyside section {
+  margin: auto auto auto 0;
+}
+
+.home.sidebyside aside {
+  margin: 0 0 0 auto;
+  max-width: none;
+  width: 52%;
+}
+
+.home.sidebyside {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25em;
+}
+
 .sidebyside aside img {
-  width: 26em;
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .home.sidebyside aside {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .home.sidebyside aside {
+    display: none;
+  }
 }
 
 section.intro {
-  max-width: 29em;
-  margin: auto 0;
+  max-width: 26em;
+  margin: auto 10em auto 0;
 }
 
 @media screen and (max-width: 700px) {
@@ -501,10 +528,13 @@ body .leaflet-container a.leaflet-popup-close-button {
 }
 
 @media screen and (max-width: 800px) {
+  #list {
+    padding-top: 1.5em;
+  }
   .card {
     font-size: 13px;
-    margin: 0.5em;
-    width: 19em;
+    margin: 1em;
+    width: 100%;
   }
   .cardcontents {
     width: calc(19em - 2.908em);
