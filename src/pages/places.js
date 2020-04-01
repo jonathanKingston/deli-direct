@@ -23,12 +23,19 @@ export function init() {
     for (let place of places) {
       let delivers = place.delivers || place.postage;
       let collect = place.collect;
-      let hasFilter = deliversFilter.checked || collectFilter.checked;
+      let plantBased = place.types &&
+                       (place.types.includes("vegan") || place.types.includes("plant-based"));
+      let hasFilter = deliversFilter.checked ||
+                      collectFilter.checked ||
+                      plantBasedFilter.checked;
       if (hasFilter) {
         if (deliversFilter.checked && !delivers) {
           continue;
         }
         if (collectFilter.checked && !collect) {
+          continue;
+        }
+        if (plantBasedFilter.checked && !plantBased) {
           continue;
         }
       }

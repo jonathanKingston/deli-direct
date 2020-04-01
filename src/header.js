@@ -40,6 +40,9 @@ export function render(props) {
 
             <input type="checkbox" name="collect" id="collectFilter" />
             <label for="collectFilter">Collect</label>
+
+            <input type="checkbox" name="plantBased" id="plantBasedFilter" />
+            <label for="plantBasedFilter">V</label>
           </form>
           <ul>
             <li class="list"><a href="/places" ${pageSelected("places")} >List</a>
