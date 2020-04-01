@@ -4,7 +4,7 @@ const nottingham = [
 ];
 
 function createLink(text, link, className) {
-  return `<a href="${link}" class="${className}" rel="noopener noreferrer" target="_blank">${text}</a>`;
+  return `<a href="${link}" class="${className}" rel="noopener noreferrer nofollow" target="_blank">${text}</a>`;
 }
 
 function placeCard(place, showMap) {
