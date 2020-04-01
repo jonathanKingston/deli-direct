@@ -207,11 +207,21 @@ let places = [{"blurb":"Online beer shop based in Nottingham. Supplying beer fro
     for (let place of places) {
       let delivers = place.delivers || place.postage;
       let collect = place.collect;
-      if (!deliversFilter.checked && !collect) {
-        continue;
-      }
-      if (!collectFilter.checked && !delivers) {
-        continue;
+      let plantBased = place.types &&
+                       (place.types.includes("vegan") || place.types.includes("plant-based"));
+      let hasFilter = deliversFilter.checked ||
+                      collectFilter.checked ||
+                      plantBasedFilter.checked;
+      if (hasFilter) {
+        if (deliversFilter.checked && !delivers) {
+          continue;
+        }
+        if (collectFilter.checked && !collect) {
+          continue;
+        }
+        if (plantBasedFilter.checked && !plantBased) {
+          continue;
+        }
       }
       let placeContent = placeCard(place, true);
       let placeCardElement = document.createElement("div");

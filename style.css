@@ -384,12 +384,12 @@ main, #map {
 
 #filter ul .map a::before {
   -webkit-mask-image: url('/icons/map-icon.svg');
-  mask-image: url('/icons/map.svg');
+          mask-image: url('/icons/map-icon.svg');
 }
 
 #filter ul .list a::before {
   -webkit-mask-image: url('/icons/list.svg');
-  mask-image: url('/icons/list.svg');
+          mask-image: url('/icons/list.svg');
 }
 
 #filter ul li:first-child a {
@@ -456,6 +456,27 @@ main, #map {
 
 #listFilter input[type='checkbox']:checked + label {
   color: #fff;
+}
+
+#listFilter #plantBasedFilter {
+  width: 2.2rem;
+  border-radius: 100%;
+}
+
+#listFilter #plantBasedFilter + label {
+  margin: auto 0 auto -1.6rem;
+  width: 1rem;
+  height: 1rem;
+  text-indent: -9999px;
+  -webkit-mask-image: url('/icons/vegetarian-mark.svg');
+          mask-image: url('/icons/vegetarian-mark.svg');
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background: #019A78;
+}
+
+#listFilter #plantBasedFilter:checked + label {
+  background: #fff;
 }
 
 @media screen and (max-width: 700px) {

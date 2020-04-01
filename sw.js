@@ -1,5 +1,5 @@
-const CACHE_NAME = "0b7ce8eb-55da-464e-a1a0-1c1068500f94";
-    let urlsToCache = ["/.style.css.swp","/favicon.ico","/icons/arrow.svg","/icons/check-icon.svg","/icons/exit.svg","/icons/facebook.svg","/icons/filter-close.svg","/icons/instagram.svg","/icons/list.svg","/icons/map-icon.svg","/icons/map.svg","/icons/marker.svg","/icons/parent-facebook.svg","/icons/parent-instagram.svg","/icons/parent-twitter.svg","/icons/phone.svg","/icons/twitter.svg","/icons/website.svg","/images/home-image.png","/images/home-image.svg","/images/icons-192.png","/images/icons-512.png","/images/logo.svg","/manifest.webmanifest","/style.css","/about","/","/map","/places","/output.js"];
+const CACHE_NAME = "13958570-a46c-4350-91ef-b717a6d5d6bc";
+    let urlsToCache = ["/favicon.ico","/icons/arrow.svg","/icons/check-icon.svg","/icons/exit.svg","/icons/facebook.svg","/icons/filter-close.svg","/icons/instagram.svg","/icons/list.svg","/icons/map-icon.svg","/icons/map.svg","/icons/marker.svg","/icons/parent-facebook.svg","/icons/parent-instagram.svg","/icons/parent-twitter.svg","/icons/phone.svg","/icons/twitter.svg","/icons/vegetarian-mark.svg","/icons/website.svg","/images/home-image.png","/images/home-image.svg","/images/icons-192.png","/images/icons-512.png","/images/logo.svg","/manifest.webmanifest","/style.css","/about","/","/map","/places","/output.js"];
     let additionalUrlsToCache = [
   "https://unpkg.com/leaflet@1.6.0/dist/leaflet.js",
   "https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
