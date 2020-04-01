@@ -1,4 +1,4 @@
-const CACHE_NAME = "3902f07d-c631-431f-8285-b62ec0452ca5";
+const CACHE_NAME = "a9ea09de-b9b1-4d3f-ad92-5a7e07eb4674";
     let urlsToCache = ["/favicon.ico","/icons/arrow.svg","/icons/check-icon.svg","/icons/exit.svg","/icons/facebook.svg","/icons/filter-close.svg","/icons/instagram.svg","/icons/list.svg","/icons/map-icon.svg","/icons/map.svg","/icons/marker.svg","/icons/parent-facebook.svg","/icons/parent-instagram.svg","/icons/parent-twitter.svg","/icons/phone.svg","/icons/twitter.svg","/icons/vegetarian-mark.svg","/icons/website.svg","/images/home-image.png","/images/home-image.svg","/images/icons-192.png","/images/icons-512.png","/images/logo.svg","/manifest.webmanifest","/style.css","/about","/","/map","/places","/output.js"];
     let additionalUrlsToCache = [
   "https://unpkg.com/leaflet@1.6.0/dist/leaflet.js",
