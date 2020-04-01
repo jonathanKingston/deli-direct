@@ -27,10 +27,14 @@ self.addEventListener('fetch', function(event) {
         return fetch(event.request).then(
           function(response) {
             // Check if we received a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+            let shouldCache = response && response.status === 200 && response.type === 'basic';
+            let url = new URL(event.request.url);
+            if (["fonts.googleapis.com", "fonts.gstatic.com"].includes(url.hostname)) {
+              shouldCache = true;
+            }
+            if (!shouldCache) {
               return response;
             }
-
             let responseToCache = response.clone();
 
             caches.open(CACHE_NAME)
