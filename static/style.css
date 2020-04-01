@@ -197,11 +197,6 @@ button:hover {
   margin-top: 3.125em;
 }
 
-.home.sidebyside {
-  margin-top: 6.25rem;
-  margin-bottom: 6.25em;
-}
-
 .sidebyside section {
   max-width: 26em;
   margin: 2em;
@@ -214,12 +209,23 @@ button:hover {
 
 .home.sidebyside aside {
   max-width: none;
-  margin: 0;
   width: 35%;
+}
+
+.home.sidebyside section,
+.home.sidebyside aside {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25em;
 }
 
 .sidebyside aside img {
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .home.sidebyside aside {
+    display: none;
+  }
 }
 
 section.intro {
