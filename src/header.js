@@ -42,7 +42,7 @@ export function render(props) {
             <label for="collectFilter">Collect</label>
 
             <input type="checkbox" name="plantBased" id="plantBasedFilter" />
-            <label for="plantBasedFilter" class="plantBasedFilterLabel">V</label>
+            <label for="plantBasedFilter" class="plantBasedFilterLabel" title="Plant based">Plant based</label>
           </form>
           <ul>
             <li class="list"><a href="/places" ${pageSelected("places")} >List</a>
