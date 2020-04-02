@@ -544,8 +544,8 @@ body .leaflet-container a.leaflet-popup-close-button {
   background-size: cover;
   width: 14px;
   height: 14px;
-  top: 14px;
-  right: 14px;
+  top: 22px;
+  right: 19px;
 }
 
 @media screen and (max-width: 800px) {
