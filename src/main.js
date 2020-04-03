@@ -1,3 +1,7 @@
+if (!("fetch" in window)) {
+   document.getElementById("unsupported").removeAttribute("hidden");
+}
+
 const nottingham = [
   52.95448349999999,
   -1.1549223

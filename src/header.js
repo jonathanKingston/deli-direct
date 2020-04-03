@@ -49,5 +49,8 @@ export function render(props) {
             <li class="map"><a href="/map" ${pageSelected("map")} >Map</a>
           </ul>
         </nav>
+        <div id="unsupported" hidden>
+          Unfortunately your browser is unsupported at the moment.
+        </div>
   `;
 }
