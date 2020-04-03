@@ -1,5 +1,6 @@
 "use strict";
 import { v4 as uuidv4 } from "uuid";
+import Terser from "terser";
 const fs = require("fs");
 const path = require("path");
 let outputPaths = [];
@@ -106,7 +107,7 @@ async function generatePages() {
 
   let mainJs = fs.readFileSync("src/main.js");
   let out = "dist/output.js";
-  fs.writeFileSync(out, output + mainJs);
+  fs.writeFileSync(out, Terser.minify(output + mainJs).code);
   outputPaths.push(out);
 }
 
@@ -126,9 +127,10 @@ async function init() {
     });
   let rawSw = fs.readFileSync("src/sw.js");
   let key = uuidv4();
-  fs.writeFileSync("dist/sw.js", `const CACHE_NAME = "${key}";
+  let swCode = `const CACHE_NAME = "${key}";
     let urlsToCache = ${JSON.stringify(outputPaths)};
-    ${rawSw}`);
+    ${rawSw}`;
+  fs.writeFileSync("dist/sw.js", Terser.minify(swCode).code);
 }
 
 init();
