@@ -1,6 +1,7 @@
 "use strict";
 import { v4 as uuidv4 } from "uuid";
 import Terser from "terser";
+const swc = require("@swc/core");
 const fs = require("fs");
 const path = require("path");
 let outputPaths = [];
@@ -107,7 +108,9 @@ async function generatePages() {
 
   let mainJs = fs.readFileSync("src/main.js");
   let out = "dist/output.js";
-  fs.writeFileSync(out, Terser.minify(output + mainJs).code);
+  let code = output + mainJs;
+  let outCode = await swc.transform(code, {});
+  fs.writeFileSync(out, Terser.minify(outCode.code).code);
   outputPaths.push(out);
 }
 
