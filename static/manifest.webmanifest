@@ -1,7 +1,7 @@
 {
-  "short_name": "deli direct",
-  "name": "deli direct: find food locally",
-  "description": "Find local businesses locally",
+  "short_name": "Deli Direct",
+  "name": "Deli Direct: find local independents",
+  "description": "Find local food and drink businesses locally",
   "icons": [
     {
       "src": "/images/icons-192.png",

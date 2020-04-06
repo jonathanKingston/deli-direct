@@ -1,7 +1,7 @@
 import type { PageProps } from "../types";
 
 export const details = {
-  "description": "deli direct finds local companies offering supplies to those in need",
+  "description": "Deli Direct finds local companies offering supplies to those in need",
   "title": "About us"
 };
 

@@ -4,7 +4,7 @@ export function render(props) {
     <footer>
       <div class="center">
         <section>
-          <h4>Get added to deli direct</h4>
+          <h4>Get added to Deli Direct</h4>
           <p>Deli Direct currently only serves Nottingham, UK &mdash; but we hope to expand to other regions. If you would like to contribute your business, please add it via the <a href="/about">business submission form</a>.</p>
         </section>
         <nav class="menu">
