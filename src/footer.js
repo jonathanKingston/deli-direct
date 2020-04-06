@@ -29,7 +29,7 @@ export function render(props) {
         </nav>
       </div>
     </footer>
-    <script src="output.js"></script>
+    <script src="bundle.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161955128-1"></script>
   </body>
   </html>

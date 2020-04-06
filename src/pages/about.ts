@@ -1,9 +1,11 @@
+import type { PageProps } from "../types";
+
 export const details = {
   "description": "deli direct finds local companies offering supplies to those in need",
   "title": "About us"
 };
 
-export function render(props) {
+export function render(props: PageProps) {
   return `
   <div class="sidebyside">
     <section>
@@ -111,17 +113,17 @@ export function render(props) {
 
 export function init() {
   let collectForm = document.getElementById("collectForm");
+  let formSuccess = document.getElementById("formSuccess");
+
   collectForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let submitPath = "https://script.google.com/macros/s/AKfycbwihGbK7N_jR_VPfDOpp0nrQsxFCHdYn83yvGe0KXgd64QjSOB0/exec?";
 
-    let fields = [...collectForm.querySelectorAll("input,textarea")];
-    let data = {};
+    let fields = [...collectForm.querySelectorAll("input,textarea")] as Array<HTMLInputElement|HTMLTextAreaElement>;
     for (let field of fields) {
       submitPath += `&${field.name}=${encodeURIComponent(field.value)}`;
     }
   
-    submitPath.searchParams = data;
     let request = new Request(submitPath);
     fetch(request, {
       method: "GET",

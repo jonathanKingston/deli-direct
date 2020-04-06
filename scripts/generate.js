@@ -50,19 +50,6 @@ function copyFile(src, dest) {
   }
 }
 
-let rawdata = fs.readFileSync("data/src/places.json");
-let places = JSON.parse(rawdata);
-let outputPlaces = [];
-for (let place of places) {
-  if (place.offline || place.outofscope) {
-    continue;
-  }
-  // ignore if we don't have functionality
-  if (!(place.delivers || place.postage || place.collect)) {
-    continue;
-  }
-  outputPlaces.push(place);
-}
 
 import { render as renderHeader } from "../src/header.js";
 import { render as renderFooter } from "../src/footer.js";
@@ -75,20 +62,16 @@ async function generatePages() {
   let paths = {}; 
   let pageFileNames = await fs.promises.readdir("src/pages");
   for (let pageFileName of pageFileNames) {
-    if (!pageFileName.match(/[.]js$/)) {
+    if (!pageFileName.match(/[.](js|ts)$/)) {
       continue;
     }
+    let pageName = pageFileName.replace(".js", "").replace(".ts", "");
     let { render, details, init } = await import(`../src/pages/${pageFileName}`);
-    let pageName = pageFileName.replace(".js", "");
     details.page = pageName;
   
     let canonical = details.canonical || `/${pageName}`;
     // Stringify methods for JS routing
-    paths[`${canonical}`] = `{
-      ${outputShortFunction(render)},
-      details: ${JSON.stringify(details)},
-      ${outputShortFunction(init)}
-    }`;
+    paths[`${canonical}`] = pageFileName;
   
     let header = renderHeader(details);
     let page = render(details);
@@ -97,21 +80,20 @@ async function generatePages() {
     outputPaths.push(out);
     fs.writeFileSync(out, `${header}${page}${footer}`.replace(/\s+/g, " "));
   }
-  
-  // Now add the places list to the js files
-  let output = `let places = ${JSON.stringify(outputPlaces)};`;
-  output += `let paths = {`;
-  for (let path in paths) {
-    output += `"${path}": ${paths[path]},`;
-  }
-  output += `};`;
 
-  let mainJs = fs.readFileSync("src/main.js");
-  let out = "dist/output.js";
-  let code = output + mainJs;
-  let outCode = await swc.transform(code, {});
-  fs.writeFileSync(out, Terser.minify(outCode.code).code);
-  outputPaths.push(out);
+  let interfaceOutput = `interface Routes {`;
+  let routesOutput = `export let routes: any = {`;
+  for (let path in paths) {
+    routesOutput += `"${path}": require('../src/pages/${paths[path]}'),`;
+    interfaceOutput += `"${path}": any;`;
+  }
+  routesOutput += `};`;
+  interfaceOutput += `};`;
+
+  fs.writeFileSync("tmp/routes.ts", routesOutput + interfaceOutput);
+
+  // Webpack builds:
+  outputPaths.push("dist/bundle.js");
 }
 
 async function init() {
