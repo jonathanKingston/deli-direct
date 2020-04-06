@@ -90,7 +90,7 @@ async function generatePages() {
   routesOutput += `};`;
   interfaceOutput += `};`;
 
-  fs.writeFileSync("dist/routes.ts", routesOutput + interfaceOutput);
+  fs.writeFileSync("tmp/routes.ts", routesOutput + interfaceOutput);
 
   // Webpack builds:
   outputPaths.push("dist/bundle.js");

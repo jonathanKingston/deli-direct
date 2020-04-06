@@ -1,5 +1,5 @@
 import { nottingham, showFilter, placeCard } from "../utils";
-import { places } from "../../dist/places";
+import { places } from "../../tmp/places";
 import type { PageProps } from "../types";
 
 export const details = {

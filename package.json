@@ -6,7 +6,7 @@
   "scripts": {
     "init": "./scripts/init.sh",
     "serve": "node ./scripts/serve.js",
-    "build": "cd data && git pull && cd ../dist && git rm --ignore-unmatch -rf * && cd ../ && node ./scripts/generatePlaces.js && npx esm-ts-node ./scripts/generate.js && npx webpack",
+    "build": "mkdir -p tmp && cd data && git pull && cd ../dist && git rm --ignore-unmatch -rf * && cd ../ && node ./scripts/generatePlaces.js && npx esm-ts-node ./scripts/generate.js && npx webpack && rm -r tmp",
     "publish": "cd dist && git add . && git commit -m \"Latest build\" && git push",
     "optimise-svg": "./node_modules/svgo/bin/svgo static/icons/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1"

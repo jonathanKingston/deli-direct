@@ -29,4 +29,4 @@ for (let place of places) {
 let output = `import type { Place } from "../src/types";
   export let places: Array<Place> = ${JSON.stringify(outputPlaces, null, 2)};
 `;
-fs.writeFileSync("dist/places.ts", output);
+fs.writeFileSync("tmp/places.ts", output);

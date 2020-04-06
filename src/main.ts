@@ -1,4 +1,4 @@
-import { routes } from "../dist/routes";
+import { routes } from "../tmp/routes";
 
 if (!("fetch" in window)) {
    document.getElementById("unsupported").removeAttribute("hidden");
