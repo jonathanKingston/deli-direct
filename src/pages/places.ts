@@ -1,6 +1,7 @@
 import { showFilter, getListFilterElement, placeCard } from "../utils";
 import { places } from "../../tmp/places";
 import type { PageProps } from "../types";
+import { calculateDistance, getAproximateLocation, loadIpLocation } from "../map";
 
 export const details = {
   "description": "Listing local independent businesses in Nottingham available or collection or delivery.",
@@ -20,6 +21,21 @@ function renderPlaces() {
   let listElement = document.getElementById("list");
 
   listElement.innerHTML = "";
+  let aproxLocation = getAproximateLocation();
+
+  places.sort((a, b) => {
+    let distanceA = calculateDistance(aproxLocation, [a.location?.lat || 0, a.location?.lng || 0]);
+    let distanceB = calculateDistance(aproxLocation, [b.location?.lat || 0, b.location?.lng || 0]);
+
+    if (distanceA < distanceB) {
+      return -1;
+    }
+    if (distanceA > distanceB) {
+      return 1;
+    }
+    return 0;
+  });
+
   for (let place of places) {
     let delivers = place.delivers || place.postage;
     let collect = place.collect;
@@ -49,6 +65,7 @@ function renderPlaces() {
 
 export function init() {
   showFilter();
+  loadIpLocation();
   let listFilterElement = getListFilterElement();
   listFilterElement.removeAttribute("hidden");
   listFilterElement.addEventListener("change", () => {

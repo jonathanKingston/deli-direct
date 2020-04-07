@@ -6,7 +6,7 @@
   "scripts": {
     "init": "./scripts/init.sh",
     "serve": "node ./scripts/serve.js",
-    "build": "mkdir -p tmp && cd data && git pull && cd ../dist && git rm --ignore-unmatch -rf * && cd ../ && node ./scripts/generatePlaces.js && npx esm-ts-node ./scripts/generate.js && npx webpack && rm -r tmp",
+    "build": "mkdir -p tmp && cd data && git pull && cd ../dist && git rm --ignore-unmatch -rf * && cd ../ && node ./scripts/generatePlaces.js && npx esm-ts-node ./scripts/generate.js && npx webpack",
     "publish": "cd dist && git add . && git commit -m \"Latest build\" && git push",
     "optimise-svg": "./node_modules/svgo/bin/svgo static/icons/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,7 @@
     "@types/gtag.js": "0.0.3",
     "@types/leaflet": "^1.5.12",
     "@types/node": "^13.11.0",
+    "ts-node": "^8.8.2",
     "uuid": "^7.0.2"
   },
   "devDependencies": {

@@ -4,11 +4,6 @@ function createLink(text: string, link: string, className: string) {
   return `<a href="${link}" class="${className}" rel="noopener noreferrer nofollow" target="_blank">${text}</a>`;
 }
 
-export const nottingham: [number, number] = [
-  52.95448349999999,
-  -1.1549223
-];
-
 export function showFilter() {
   let filterElement = document.getElementById("filter");
   filterElement.removeAttribute("hidden");

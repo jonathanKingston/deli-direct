@@ -35,7 +35,7 @@ function serve() {
 }
 
 function change(type, fileName) {
-  if (type == "change" && fileName.match(/[.](js|css|html|txt)$/)) {
+  if (type == "change" && fileName.match(/[.](ts|js|css|html|txt)$/)) {
     build();
   }
 }
