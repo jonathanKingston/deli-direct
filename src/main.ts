@@ -26,7 +26,11 @@ window.onload = () => {
   changePreloadStyles();
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/sw.js");
+    try {
+      navigator.serviceWorker.register("/sw.js");
+    } catch (e) {
+      console.error(e); // Not much we can do here, just ignore and console it.
+    }
   }
 }
 
