@@ -1,6 +1,27 @@
+import { places } from "../tmp/places";
+
 export const nottingham: [number, number] = [
   52.95448349999999,
   -1.1549223
+];
+
+export const regions = [
+  {
+    location: [
+      52.95448349999999,
+      -1.1549223,
+    ],
+    path: "/places/nottingham",
+    name: "Nottingham"
+  },
+  {
+    location: [
+      53.118755,
+      -1.448822
+    ],
+    path: "/places/derby",
+    name: "Derby"
+  }
 ];
 
 function toRadians(n: number) {
@@ -22,25 +43,56 @@ export function calculateDistance(a: [number, number], b: [number, number]) {
   return R * c;
 }
 
+export function findNearestRegion(userLocation: [number, number]) {
+  regions.sort((a, b) => {
+    let distanceA = calculateDistance(userLocation, [a.location[0] || 0, a.location[1] || 0]);
+    let distanceB = calculateDistance(userLocation, [b.location[0] || 0, b.location[1] || 0]);
+
+    if (distanceA < distanceB) {
+      return -1;
+    }
+    if (distanceA > distanceB) {
+      return 1;
+    }
+    return 0;
+  });
+  // TODO return error if too far away
+  return regions[0];
+}
+
+export async function lookupPostcode(postcode: string): Promise<[number, number] | null> {
+  let response = await fetch(`https://api.postcodes.io/postcodes/${postcode}`);
+  let data = await response.json();
+  if (!("result" in data)) {
+    return null;
+  }
+  return [data.result.longitude, data.result.latitude];
+}
+
+const aproxLocationKey = "aproxLocationKey";
+
 export async function loadIpLocation() {
   const ipCheck = "https://api.ipdata.co/?api-key=255e8bee85633e201aa99cdbae675bb2736795e2efbf9fef679d227d";
-  if (!("location" in localStorage)) {
+  if (!(aproxLocationKey in localStorage)) {
     try {
       let response = await fetch(ipCheck);
       let data = await response.json();
       if ("latitude" in data && "longitude" in data) {
-        localStorage["location"] = JSON.stringify([data.latitude, data.longitude]);
+        localStorage[aproxLocationKey] = JSON.stringify([data.latitude, data.longitude]);
       }
     } catch (e) {
-      localStorage["location"] = nottingham;
+      localStorage[aproxLocationKey] = null;
     }
   }
 }
 
 export function getAproximateLocation() {
   let userAproxLocation = nottingham;
-  if ("location" in localStorage) {
-    userAproxLocation = JSON.parse(localStorage.location);
+  if (aproxLocationKey in localStorage) {
+    userAproxLocation = JSON.parse(localStorage[aproxLocationKey]);
+    if (!userAproxLocation) {
+      userAproxLocation = nottingham;
+    }
   }
   
   // If the distance is greater than 25km away from nottingham revert to notts
