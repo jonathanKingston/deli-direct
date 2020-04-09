@@ -19,6 +19,7 @@ for (let place of places) {
   delete place.justeat;
   delete place.email;
   delete place.google_place_id;
+  delete place.offline_until;
   if (!place.location || !("lat" in place.location)) {
     delete place.location;
   }
