@@ -22,10 +22,11 @@ function renderPlaces() {
 
   listElement.innerHTML = "";
   let aproxLocation = getAproximateLocation();
+  let selectedPlaces = places["nottingham"];
 
-  places.sort((a, b) => {
-    let distanceA = calculateDistance(aproxLocation, [a.location?.lat || 0, a.location?.lng || 0]);
-    let distanceB = calculateDistance(aproxLocation, [b.location?.lat || 0, b.location?.lng || 0]);
+  selectedPlaces.sort((a, b) => {
+    let distanceA = calculateDistance(aproxLocation, a.location || [0,0]);
+    let distanceB = calculateDistance(aproxLocation, b.location || [0,0]);
 
     if (distanceA < distanceB) {
       return -1;
@@ -36,7 +37,7 @@ function renderPlaces() {
     return 0;
   });
 
-  for (let place of places) {
+  for (let place of selectedPlaces) {
     let delivers = place.delivers || place.postage;
     let collect = place.collect;
     let plantBased = place.types &&

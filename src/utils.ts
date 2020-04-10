@@ -44,7 +44,7 @@ export function placeCard(place: Place, showMap: boolean) {
   }
   let map = "";
   if (showMap && place.location) {
-    let maplink = `https://www.google.com/maps/search/?api=1&query=${place.location.lat},${place.location.lng}`;
+    let maplink = `https://www.google.com/maps/search/?api=1&query=${place.location[0]},${place.location[1]}`;
     map = createLink("Open Map", maplink, "map");
   }
   return `<div class="cardcontents">

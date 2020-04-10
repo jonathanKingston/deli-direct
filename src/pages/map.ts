@@ -23,10 +23,11 @@ function load() {
   });
 
   let placePointers = window.L.layerGroup();
-  for (let place of places) {
+  let selectedPlaces = places["nottingham"];
+  for (let place of selectedPlaces) {
     if (place.location) {
       let popupContent = placeCard(place, false);
-      window.L.marker([place.location.lat, place.location.lng], {icon: customIcon}).bindPopup(popupContent).addTo(placePointers);
+      window.L.marker([place.location[0], place.location[1]], {icon: customIcon}).bindPopup(popupContent).addTo(placePointers);
     }
   }
 

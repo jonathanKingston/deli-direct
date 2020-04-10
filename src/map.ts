@@ -1,17 +1,13 @@
+import type { Region } from "types";
 import { places } from "../tmp/places";
 
-export const nottingham: [number, number] = [
-  52.95448349999999,
-  -1.1549223
-];
-
-export const regions = [
+export const regions: Array<Region> = [
   {
     location: [
       52.95448349999999,
       -1.1549223,
     ],
-    path: "/places/nottingham",
+    key: "nottingham",
     name: "Nottingham"
   },
   {
@@ -19,10 +15,12 @@ export const regions = [
       53.118755,
       -1.448822
     ],
-    path: "/places/derby",
+    key: "derby",
     name: "Derby"
   }
 ];
+
+const defaultRegion = regions[0];
 
 function toRadians(n: number) {
   return n * Math.PI / 180;
@@ -87,17 +85,17 @@ export async function loadIpLocation() {
 }
 
 export function getAproximateLocation() {
-  let userAproxLocation = nottingham;
+  let userAproxLocation = defaultRegion.location;
   if (aproxLocationKey in localStorage) {
     userAproxLocation = JSON.parse(localStorage[aproxLocationKey]);
     if (!userAproxLocation) {
-      userAproxLocation = nottingham;
+      userAproxLocation = defaultRegion.location;
     }
   }
   
-  // If the distance is greater than 25km away from nottingham revert to notts
-  if (calculateDistance(nottingham, userAproxLocation) > 25000) {
-    userAproxLocation = nottingham;
+  // If the distance is greater than 25km away from defaultRegion revert to default
+  if (calculateDistance(defaultRegion.location, userAproxLocation) > 25000) {
+    userAproxLocation = defaultRegion.location;
   }
 
   return userAproxLocation;

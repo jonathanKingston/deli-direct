@@ -13,10 +13,20 @@ export interface Place {
   location?: PlaceLocation;
 };
 
-export interface PlaceLocation {
-  lat: number;
-  lng: number;
-};
+export type PlaceLocation = [
+  number,
+  number
+];
 
 export interface PageProps {
+};
+
+export interface RegionPlaceMap {
+  [key: string]: Array<Place>
+};
+
+export interface Region {
+  name: string;
+  key: string;
+  location: PlaceLocation;
 };
