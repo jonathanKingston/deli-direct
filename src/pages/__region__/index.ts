@@ -1,11 +1,13 @@
-import { showFilter, getListFilterElement, placeCard } from "../utils";
-import { places } from "../../tmp/places";
-import type { PageProps } from "../types";
-import { calculateDistance, getAproximateLocation, loadIpLocation } from "../map";
+import { showFilter, getListFilterElement, placeCard } from "../../utils";
+import { places } from "../../../tmp/places";
+import type { PageProps, Place } from "../../types";
+import { calculateDistance, getAproximateLocation, loadIpLocation } from "../../map";
 
-export const details = {
-  "description": "Listing local independent businesses in Nottingham available or collection or delivery.",
-  "title": "Listing Nottingham food & drink independents"
+export function details(props: any) {
+  return {
+    "description": `Listing local independent businesses in ${props.region.name} available or collection or delivery.`,
+    "title": `Listing ${props.region.name} food & drink independents`
+  };
 };
 
 export function render(props: PageProps) {
@@ -14,7 +16,7 @@ export function render(props: PageProps) {
   `;
 }
 
-function renderPlaces() {
+async function renderPlaces(props: PageProps) {
   let deliversFilter = document.getElementById("deliversFilter") as HTMLInputElement;
   let collectFilter = document.getElementById("collectFilter") as HTMLInputElement;
   let plantBasedFilter = document.getElementById("plantBasedFilter") as HTMLInputElement;
@@ -22,7 +24,8 @@ function renderPlaces() {
 
   listElement.innerHTML = "";
   let aproxLocation = getAproximateLocation();
-  let selectedPlaces = places["nottingham"];
+  let data = await fetch(`/${props.region.key}.json`);
+  let selectedPlaces: Array<Place> = await data.json();
 
   selectedPlaces.sort((a, b) => {
     let distanceA = calculateDistance(aproxLocation, a.location || [0,0]);
@@ -64,14 +67,14 @@ function renderPlaces() {
   }
 }
 
-export function init() {
+export function init(props: PageProps) {
   showFilter();
   loadIpLocation();
   let listFilterElement = getListFilterElement();
   listFilterElement.removeAttribute("hidden");
   listFilterElement.addEventListener("change", () => {
-    renderPlaces();
+    renderPlaces(props);
   });
 
-  renderPlaces();
+  renderPlaces(props);
 }

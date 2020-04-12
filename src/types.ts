@@ -19,6 +19,7 @@ export type PlaceLocation = [
 ];
 
 export interface PageProps {
+  region: Region
 };
 
 export interface RegionPlaceMap {

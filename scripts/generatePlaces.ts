@@ -45,6 +45,10 @@ for (let place of places) {
   outputPlaces["other"].push(place);
 }
 
+for (let region of regions) {
+  fs.writeFileSync(`dist/${region.key}.json`, JSON.stringify(outputPlaces[region.key]));
+}
+
 // Now add the places list to the js files
 let output = `import type { RegionPlaceMap } from "../src/types";
   export let places: RegionPlaceMap = ${JSON.stringify(outputPlaces, null, 2)};

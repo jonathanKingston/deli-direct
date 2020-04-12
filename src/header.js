@@ -1,6 +1,6 @@
 export function render(props) {
   function pageSelected(page) {
-    if (props.page == page) {
+    if (props.canonical == page) {
       return `class="selected"`;
     }
     return "";
@@ -13,7 +13,7 @@ export function render(props) {
       <title>Deli Direct - ${props.title}</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="/style.css">
       <link rel="preload" as="style" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
       <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Maitree&display=swap">
       <meta name="description" content="${props.title}">
@@ -25,13 +25,13 @@ export function render(props) {
       <header>
         <h1><a href="/">Deli Direct</a></h1>
         <nav>
-          <a href="/places" ${pageSelected("places")}>The Places</a>
+          <a href="/nottingham" ${pageSelected("places")}>The Places</a>
           <a href="/about" ${pageSelected("about")}>About Us</a>
         </nav>
       </header>
       <main>
         <nav id="filter" hidden>
-          <h2>Nottingham, UK</h2>
+          <h2>${props.region.name}, UK</h2>
           <form id="listFilter" hidden>
             <legend>Filter</legend>
 
@@ -45,8 +45,8 @@ export function render(props) {
             <label for="plantBasedFilter" class="plantBasedFilterLabel" title="Plant based">Plant based</label>
           </form>
           <ul>
-            <li class="list"><a href="/places" ${pageSelected("places")} >List</a>
-            <li class="map"><a href="/map" ${pageSelected("map")} >Map</a>
+            <li class="list"><a href="/${props.region.key}" ${pageSelected(`/${props.region.key}`)} >List</a>
+            <li class="map"><a href="/${props.region.key}/map" ${pageSelected(`/${props.region.key}/map`)} >Map</a>
           </ul>
         </nav>
         <div id="unsupported" hidden>

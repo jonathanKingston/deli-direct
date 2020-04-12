@@ -13,11 +13,13 @@ declare global {
 
 
 async function init() {
-  let currentPath: string = document.location.pathname;
+  let pageProps = JSON.parse(document.getElementById("pageProps").textContent);
+  let currentPath: string = document.location.pathname.replace(/\/$/, "");
+
   if (currentPath in routes) {
     let page: any = await routes[currentPath];
     if ("init" in page) {
-      page.init();
+      page.init(pageProps);
     }
   }
 }

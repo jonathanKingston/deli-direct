@@ -33,7 +33,7 @@ async function submitPostcode(e: Event) {
   let region = findNearestRegion(location);
   // TODO store selected location
   console.log("b", location, region);
-  window.location.href = `/places/${region.key}`;
+  window.location.href = `/${region.key}/places`;
   
   // get location
   // go to places

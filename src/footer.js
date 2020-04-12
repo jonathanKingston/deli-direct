@@ -9,7 +9,7 @@ export function render(props) {
         </section>
         <nav class="menu">
           <ul>
-            <li><a href="/places">The Places</a>
+            <li><a href="/${props.region.key}">The Places</a>
             <li><a href="/about">About</a>
           </ul>
         </nav>
@@ -29,7 +29,8 @@ export function render(props) {
         </nav>
       </div>
     </footer>
-    <script src="bundle.js"></script>
+    <script id="pageProps" type="application/json">${JSON.stringify(props)}</script>
+    <script src="/bundle.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161955128-1"></script>
   </body>
   </html>

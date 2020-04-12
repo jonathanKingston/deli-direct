@@ -20,7 +20,7 @@ export const regions: Array<Region> = [
   }
 ];
 
-const defaultRegion = regions[0];
+export const defaultRegion = regions[0];
 
 function toRadians(n: number) {
   return n * Math.PI / 180;

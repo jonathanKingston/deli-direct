@@ -1,10 +1,12 @@
-import { showFilter, placeCard } from "../utils";
-import { places } from "../../tmp/places";
-import type { PageProps } from "../types";
-import { calculateDistance, loadIpLocation, getAproximateLocation } from "../map";
+import { showFilter, placeCard } from "../../utils";
+import { places } from "../../../tmp/places";
+import type { PageProps } from "../../types";
+import { calculateDistance, loadIpLocation, getAproximateLocation } from "../../map";
 
-export const details = {
-  "title": "Map listings"
+export function details(props: PageProps) {
+  return {
+    "title": `Map listings for ${props.region.name}`
+  };
 };
 
 export function render(props: PageProps) {
@@ -14,16 +16,18 @@ export function render(props: PageProps) {
   `;
 }
 
-function load() {
+async function load(props: PageProps) {
   let customIcon = window.L.icon({
-    iconUrl: 'icons/marker.svg',
+    iconUrl: '/icons/marker.svg',
     iconSize:     [24, 24], // size of the icon
     iconAnchor:   [16, 24], // point of the icon which will correspond to marker's location
     popupAnchor:  [-4, -23] // point from which the popup should open relative to the iconAnchor
   });
 
   let placePointers = window.L.layerGroup();
-  let selectedPlaces = places["nottingham"];
+console.log(props);
+  let data = await fetch(`/${props.region.key}.json`);
+  let selectedPlaces = await data.json();
   for (let place of selectedPlaces) {
     if (place.location) {
       let popupContent = placeCard(place, false);
@@ -46,17 +50,17 @@ function load() {
   });
 }
 
-function loadIfComplete() {
+function loadIfComplete(props: PageProps) {
   if (document.readyState === "complete") {
-    load();
+    load(props);
   }
 }
 
-export async function init() {
+export async function init(props: PageProps) {
   showFilter();
   loadIpLocation();
-  loadIfComplete();
+  loadIfComplete(props);
   document.addEventListener("readystatechange", (e) => {
-    loadIfComplete();
+    loadIfComplete(props);
   });
 }
