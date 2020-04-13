@@ -32,11 +32,7 @@ async function submitPostcode(e: Event) {
   let location = await lookupPostcode(postcode);
   let region = findNearestRegion(location);
   // TODO store selected location
-  console.log("b", location, region);
-  window.location.href = `/${region.key}/places`;
-  
-  // get location
-  // go to places
+  window.location.href = `/${region.key}`;
 }
 
 function debounce(func: any, wait: number) {

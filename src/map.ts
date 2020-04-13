@@ -12,11 +12,51 @@ export const regions: Array<Region> = [
   },
   {
     location: [
-      53.118755,
-      -1.448822
+      53.070605,
+      -0.806564
+    ],
+    key: "newark",
+    name: "Newark on Tent"
+  },
+  {
+    location: [
+      52.9188043,
+      -1.4748227
     ],
     key: "derby",
     name: "Derby"
+  },
+  {
+    location: [
+      52.898561,
+      -1.269387
+    ],
+    key: "ilkeston",
+    name: "Ilkeston"
+  },
+  {
+    location: [
+      51.538783,
+      -0.102392
+    ],
+    key: "islington",
+    name: "Islington"
+  },
+  {
+    location: [
+      53.309292,
+      -1.122656
+    ],
+    "key": "worksop",
+    "name": "Worksop"
+  },
+  {
+    location: [
+      53.215212,
+      -1.676305
+    ],
+    "key": "bakewell",
+    "name": "Bakewell"
   }
 ];
 
@@ -43,8 +83,8 @@ export function calculateDistance(a: [number, number], b: [number, number]) {
 
 export function findNearestRegion(userLocation: [number, number]) {
   regions.sort((a, b) => {
-    let distanceA = calculateDistance(userLocation, [a.location[0] || 0, a.location[1] || 0]);
-    let distanceB = calculateDistance(userLocation, [b.location[0] || 0, b.location[1] || 0]);
+    let distanceA = calculateDistance(userLocation, a.location || [0,0]);
+    let distanceB = calculateDistance(userLocation, b.location || [0,0]);
 
     if (distanceA < distanceB) {
       return -1;
@@ -64,7 +104,7 @@ export async function lookupPostcode(postcode: string): Promise<[number, number]
   if (!("result" in data)) {
     return null;
   }
-  return [data.result.longitude, data.result.latitude];
+  return [data.result.latitude, data.result.longitude];
 }
 
 const aproxLocationKey = "aproxLocationKey";

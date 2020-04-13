@@ -34,19 +34,30 @@ for (let place of places) {
     delete place.location;
   }
 
+  let inPlace = false;
+
+  if ("named_region" in place) {
+    inPlace = true;
+    if (!("locaton" in place) || !place.location) {
+      place.location = region.location;
+    }
+    outputPlaces[place.named_region].push(place);
+  }
   if ("location" in place) {
     for (let region of regions) {
-      if (calculateDistance(region.location, place.location) <= 25000) {
+      if (calculateDistance(region.location, place.location) <= 15000) { // 15km
+        inPlace = true;
         outputPlaces[region.key].push(place);
-        continue outer;
       }
     }
   }
-  outputPlaces["other"].push(place);
+  if (!inPlace) {
+    outputPlaces["other"].push(place);
+  }
 }
 
-for (let region of regions) {
-  fs.writeFileSync(`dist/${region.key}.json`, JSON.stringify(outputPlaces[region.key]));
+for (let region in outputPlaces) {
+  fs.writeFileSync(`dist/${region}.json`, JSON.stringify(outputPlaces[region]));
 }
 
 // Now add the places list to the js files

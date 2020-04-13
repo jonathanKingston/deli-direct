@@ -9,6 +9,7 @@ export interface Place {
   collect?: boolean;
   postage?: boolean;
   website?: string;
+  named_region?: string;
   types?: Array<string>;
   location?: PlaceLocation;
 };

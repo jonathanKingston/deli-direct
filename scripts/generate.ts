@@ -94,6 +94,13 @@ async function generatePages() {
   let pageFileNames = await fs.promises.readdir("src/pages");
   let pages = await generatePagesForDirectory("src/pages/", { region: defaultRegion });
   let paths = Object.assign({}, pages);
+
+  regions.push({
+    key: "other",
+    name: "Other",
+    location: [0,0]
+  });
+
   for (let region of regions) {
     let regionPages = await generatePagesForDirectory("src/pages/__region__/", { region });
     paths = Object.assign(paths, regionPages);

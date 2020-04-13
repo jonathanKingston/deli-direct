@@ -25,7 +25,6 @@ async function load(props: PageProps) {
   });
 
   let placePointers = window.L.layerGroup();
-console.log(props);
   let data = await fetch(`/${props.region.key}.json`);
   let selectedPlaces = await data.json();
   for (let place of selectedPlaces) {
@@ -43,9 +42,10 @@ console.log(props);
   let mbUrl = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw";
   
   let grayscale = window.L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+  let center = props.region.location || getAproximateLocation();
   let map = window.L.map('map', {
-    center: getAproximateLocation(),
-    zoom: 12,
+    center,
+    zoom: 14,
     layers: [grayscale, placePointers]
   });
 }
