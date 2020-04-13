@@ -8,11 +8,13 @@ let outputPlaces: RegionPlaceMap = {
   "other": []
 };
 
+let regionMap = new Map();
+
 for (let region of regions) {
   outputPlaces[region.key] = [];
+  regionMap.set(region.key, region);
 }
 
-outer:
 for (let place of places) {
   if (place.offline || place.outofscope) {
     continue;
@@ -39,7 +41,7 @@ for (let place of places) {
   if ("named_region" in place) {
     inPlace = true;
     if (!("locaton" in place) || !place.location) {
-      place.location = region.location;
+      place.location = regionMap.get(place["named_region"]).location || false;
     }
     outputPlaces[place.named_region].push(place);
   }

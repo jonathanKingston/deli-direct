@@ -22,6 +22,11 @@ async function init() {
       page.init(pageProps);
     }
   }
+
+  let regionSelect = document.getElementById("regionSelect") as HTMLSelectElement;
+  regionSelect.addEventListener("change", (e) => {
+    window.location.href = `/${regionSelect.value}`;
+  });
 }
 
 window.onload = () => {

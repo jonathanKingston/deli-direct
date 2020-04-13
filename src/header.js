@@ -1,3 +1,5 @@
+import { regions } from "./map";
+
 export function render(props) {
   function pageSelected(page) {
     if (props.canonical == page) {
@@ -6,6 +8,11 @@ export function render(props) {
     return "";
   }
   let canonicalPath = props.canonical || "/" + props.page;
+  let regionOptions = "";
+  for (let region of regions) {
+    let selected = props.region.key === region.key ? "selected" : "";
+    regionOptions += `<option value="${region.key}" ${selected}>${region.name}</option>`;
+  }
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -32,6 +39,9 @@ export function render(props) {
       <main>
         <nav id="filter" hidden>
           <h2>${props.region.name}, UK</h2>
+          <select id="regionSelect">
+            ${regionOptions}
+          </select>
           <form id="listFilter" hidden>
             <legend>Filter</legend>
 
